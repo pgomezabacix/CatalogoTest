@@ -2,6 +2,11 @@ body .action-item__icon--collapse:before {
     content: "\f106";
 }
 
+/* fonts to inter */
+.breadcrumb-item, .overline, .dropdown-item, .nav-drawer__text{
+    font-family: 'Inter', sans-serif;
+}
+
 /* surface classes */
 .surface--no-shadow #testing-page .panel {
   box-shadow: none;
