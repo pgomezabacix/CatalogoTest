@@ -1,0 +1,1982 @@
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 col-12">
+        <button class="btn" onclick="enableFilters()" id="filterStarter">Activar</button>
+        <div class="material-form  mb-grid-gutter scale-entrance">
+            <div class="material-form__container ">
+                <input type="text" id="searchInput" autocomplete="off">
+                <label>Filtrar</label>
+                <div class="material-form__icon-right">
+                    <i class="fas fa-filter text-blue"></i>
+                </div>
+            </div>
+        </div>
+        <div class="panel mb-grid-gutter scale-entrance panel--sticky panel__color--dark" id="global_permissions">
+            <div class="panel__header action-bar">
+                <span class="panel__text">
+                    <span class="panel__text--primary">Permisos globales</span>
+                </span>
+            </div>
+            <div class="divider"></div>
+            <div class="panel--sticky__scroll scrollbar--blue">
+                <div class="panel__body permissions">
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Activos fijos</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal1" name="P1005" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal1" name="P1010" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Eliminar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal1" name="P1015" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal1" name="P1020" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver inventario de salón</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Archivos compartidos</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4305" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar archivos compartidos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4310" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar archivos compartidos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4306" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar archivos por estudiante</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4307" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver archivos compartidos por estudiante</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4308" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar archivos compartidos por estudiantes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal2" name="P4309" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar archivos compartidos por estudiantes</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal2" name="P4311" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver detalles de archivos compartidos por estudiante</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Artículos en venta</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Artículos individuales</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal3" name="P1105" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar artículos individuales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal3" name="P1110" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar artículos individuales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal3" name="P1115" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Inventario</span>
+                        </label>
+                        <div class="overline mt-3">Paquetes</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal3" name="P1120" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar paquetes</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal3" name="P1125" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar paquete</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Boletines</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal4" name="P1205" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal4" name="P1210" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Eliminar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal4" name="P1215" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Bolsa de trabajo</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal5" name="P4205" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal5" name="P4210" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Calendario de eventos</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal6" name="P1305" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal6" name="P1310" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Eliminar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal6" name="P1315" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal6" name="P1320" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Asistencia de evento</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal6" name="P1325" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Actualizar eventos de lista de distribución</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Calificaciones</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal7" name="P1405" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Estado de periodo</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Configuración general</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Anotaciones</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1532" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Razones de anotación</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1533" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar anotación</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1534" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar anotaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1535" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar anotaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1536" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver anotaciones</span>
+                        </label>
+                        <div class="overline mt-3">Campos adicionales</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1521" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir y cerrar capturas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1505" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar campos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1508" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Administración de categorías para los campos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1510" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar campos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1515" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar campos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1520" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver campos adicionales</span>
+                        </label>
+                        <div class="overline mt-3">Configuración de campos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1537" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Estudiantes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1538" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Profesores</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1539" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Padres de familia</span>
+                        </label>
+                        <div class="overline mt-3">Documentos requeridos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1522" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar documentos requeridos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1523" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar documentos requeridos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1524" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver documentos requeridos</span>
+                        </label>
+                        <div class="overline mt-3">Modo de prueba</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1598" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar instancia de prueba</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1599" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Iniciar sesión de prueba</span>
+                        </label>
+                        <div class="overline mt-3">Logs</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1540" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Búsqueda de logs</span>
+                        </label>
+                        <div class="overline mt-3">Plantillas de documentos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1525" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar plantillas de documentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P2852" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar formatos predefinidos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1526" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar recursos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1527" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar plantillas de documentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1528" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar recursos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1529" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar plantillas de documentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P2853" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar formatos predefinidos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1530" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver plantillas de documentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1531" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver recursos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1560" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Razones de baja</span>
+                        </label>
+                        <div class="overline mt-3">Reportes personalizados</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1565" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar reportes personalizados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1570" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar consulta</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1575" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar reportes personalizados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1580" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Generar reportes personalizados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1585" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar reportes personalizados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1590" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar consulta</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1595" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver reportes personalizados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1597" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver consulta</span>
+                        </label>
+                        <div class="overline mt-3">Restablecer contraseñas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1541" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Estudiantes / Padres de familia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal8" name="P1542" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Profesores</span>
+                        </label>
+                        <div class="overline mt-3">Mensajería</div>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal8" name="P1550" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Mensajes con problemas de envío</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Contactos internos</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal9" name="P1605" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal9" name="P1610" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Contactos del estudiante</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal10" name="P1606" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal10" name="P1607" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Autorizar / Desautorizar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Colegiatura</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Administración de folios</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1701" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Búsqueda de folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1703" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Cancelar folio</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1758" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Cancelar factura electrónica tipo PPD</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1761" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Procesos de cancelación de folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1702" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Detalle de factura o recibo</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1740" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Devoluciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1704" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Imprimir folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1705" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1759" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Sustitución de factura</span>
+                        </label>
+                        <div class="overline mt-3">Cobros únicos / Inscripciones</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1706" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Cartas de referencia bancaria</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1707" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar cobro únicos / inscripciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1708" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver y agregar cobros únicos / inscripciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1709" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Volver a cobrar cobros únicos / inscripciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1757" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar cobros únicos / inscripciones</span>
+                        </label>
+                        <div class="overline mt-3">Cuentas de banco</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1710" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar cuentas de banco</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1711" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar cuentas de banco</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1755" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Regenerar referencias</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1712" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver cuentas de banco</span>
+                        </label>
+                        <div class="overline mt-3">Descuentos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1736" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar descuentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P3321" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar descuento en ventanilla</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1713" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar descuentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1737" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar descuentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1738" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Procesar descuentos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1739" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver descuentos</span>
+                        </label>
+                        <div class="overline mt-3">Facturación electrónica</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1714" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Configuración facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1715" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Descargas facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1716" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Detalles facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1756" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Donatarias</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1749" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar cobros recurrentes individuales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1717" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1753" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar notas de crédito</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1718" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Exportar facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1719" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Generar facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1765" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Devengamiento</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1720" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Notas de crédito</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1760" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Notas de crédito con descuento</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1721" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Reportes facturación electrónica</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1722" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Generación de cartas de referencias bancarias</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1723" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ingreso de pagos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1935" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar fecha de ingreso en ventanilla</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P2911" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Permitir ingreso fuera de orden cronológico en periodos que lo requieren</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1724" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ingreso de pagos por banco</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1725" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar colegiatura base</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1727" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Procesar colegiatura y cobros recurrentes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1748" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver resumen de recurrentes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1770" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Sustitución de facturación electrónica</span>
+                        </label>
+                        <div class="overline mt-3">Pagos por internet</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1726" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Exportar archivos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P4650" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Conciliación</span>
+                        </label>
+                        <div class="overline mt-3">Procesos de inscripción</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1750" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1751" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1752" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Recargos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1728" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar recargos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1780" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Copiar recargos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1729" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Desactivar / Reactivar recargo</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1730" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar recargos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1731" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Procesar recargos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1732" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver recargos</span>
+                        </label>
+                        <div class="overline mt-3">Series de folios</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1733" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar series de folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1746" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar series de folios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P3930" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Transferir folios</span>
+                        </label>
+                        <div class="overline mt-3">Suspensiones automáticas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1735" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1741" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1742" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Excepciones de suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1743" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1744" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Listado de suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1745" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver suspensiones académicas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal11" name="P1785" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Procesar suspensiones automáticas</span>
+                        </label>
+                        <div class="overline mt-3">Registrar adeudo ventanilla</div>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal11" name="P1775" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Registrar adeudo ventanilla</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Encuestas</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1805" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1810" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Aplicar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1815" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Preguntas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1820" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Activar preguntas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1825" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar preguntas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1845" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar preguntas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1830" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar preguntas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1835" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver pregunta</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1840" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Resultados</span>
+                        </label>
+                        <div class="overline mt-3">Categorías</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1841" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar categorías</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal12" name="P1842" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar categorías</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal12" name="P1843" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver categoría</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Estadísticas</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P1905" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Venta de artículos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P2912" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Checador</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P1930" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Operadores</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P1910" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Padres de familia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P1925" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Personal</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal13" name="P1915" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Profesores</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal13" name="P1920" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Sesiones</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Extraordinarios</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2005" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar periodo de extraordinarios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2010" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Inscripciones de exámenes extraordinarios</span>
+                        </label>
+                        <div class="overline mt-3">Captura de calificaciones</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2015" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar captura de calificaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2020" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar publicación de calificaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2025" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Captura y estado de calificaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2030" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Cerrar toma de extraordinarios con calificaciones faltantes</span>
+                        </label>
+                        <div class="overline mt-3">Tomas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2035" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar tomas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2040" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar tomas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal14" name="P2045" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Programación de fechas en tomas</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal14" name="P2050" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver tomas</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Foros de discusión</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Foros de discusión</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4705" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar foros de discusión</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4710" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar foros de discusión</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4715" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar foros de discusión</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4720" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver foros de discusión</span>
+                        </label>
+                        <div class="overline mt-3">Temas de discusión</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4725" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar temas de discusión</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4730" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar temas de discusión</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4735" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar temas de discusión</span>
+                        </label>
+                        <div class="overline mt-3">Comentarios</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal15" name="P4740" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar comentarios</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal15" name="P4745" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar comentarios</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Servicio social</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal16" name="P4805" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificación masiva de horas de servicio social</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal16" name="P4810" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar registros de servicio social</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Generación de listas</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P3550" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Estudiantes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2105" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Profesores</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2110" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Padres de familia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2115" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Solicitantes</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2120" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Bajas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2125" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Graduados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal17" name="P2130" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Personal</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal17" name="P2135" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Operadores</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Grupos</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal18" name="P2205" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal18" name="P2220" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Copiar configuración</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal18" name="P2210" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal18" name="P2215" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Perfiles</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal18" name="P2230" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Inscripciones</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal18" name="P2231" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Permiso para entrega de estudiantes</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Horarios</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal19" name="P2306" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Activar horarios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal19" name="P2307" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar horarios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal19" name="P2308" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar horarios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal19" name="P2309" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Dividir horarios</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal19" name="P2305" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar horarios de sección</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Padres de familia</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2405" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Habilitar / Inhabilitar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2410" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2420" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar anotaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2425" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar datos de facturación</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2415" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2431" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar datos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal20" name="P2430" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar datos adicionales</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal20" name="P2416" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Suspender temporalmente</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Plan de estudios</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2505" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <div class="overline mt-3">Boletas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2510" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar boletas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2520" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar boletas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2525" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar boleta</span>
+                        </label>
+                        <div class="overline mt-3">Categorías</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2530" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar categorías</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2535" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar categorías</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2531" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar categorías de criterios y temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2536" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar categorías de criterios y temas</span>
+                        </label>
+                        <div class="overline mt-3">Clases</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2567" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Activar temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2540" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar clase</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2545" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar criterios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2550" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2551" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar temas de asistencia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2552" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Copiar temas y criterios de otra clase</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2568" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Desactivar temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2555" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar clase</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2560" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar criterios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2565" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2566" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar temas de asistencia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2570" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver criterios</span>
+                        </label>
+                        <div class="overline mt-3">Clases virtuales</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2575" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar clase virtual</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2595" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Manejo de temas</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2580" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar clases virtuales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2596" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Documentos requeridos</span>
+                        </label>
+                        <div class="overline mt-3">Grado</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal21" name="P2585" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar grado</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal21" name="P2590" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Personal</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4105" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Habilitar / Inhabilitar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4110" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4120" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar anotaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4115" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4131" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar datos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal22" name="P4130" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar datos adicionales</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal22" name="P4135" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Ver personal</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Profesores</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2605" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Acceso a cuadros concentrados</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2610" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2634" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar anotaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2615" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2620" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2622" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consultar datos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2621" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar datos adicionales</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2626" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Constancias</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2625" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Reactivar</span>
+                        </label>
+                        <div class="overline mt-3">Documentos requeridos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2630" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar documentos requeridos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2631" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Eliminar documentos requeridos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal23" name="P2632" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar documentos requeridos</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal23" name="P2633" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver documentos requeridos</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Redes sociales</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Redes sociales</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4505" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4510" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4515" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4520" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4525" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Etiquetas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4530" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4535" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4540" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal24" name="P4545" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal24" name="P4550" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Salidas y transportes</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Puertas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4559" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4556" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4555" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4557" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4558" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Registro de salidas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4560" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4561" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Notificar llegada</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4562" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Adiós</span>
+                        </label>
+                        <div class="overline mt-3">Registro de salidas de transportes</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4585" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4586" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Notificar llegada</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4587" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Adiós</span>
+                        </label>
+                        <div class="overline mt-3">Rondas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4590" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4591" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4592" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4593" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4594" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Permisos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4563" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4564" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Autorizar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4565" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Crear</span>
+                        </label>
+                        <div class="overline mt-3">Encargados</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4570" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4571" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4572" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4573" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4574" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Rutas</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4575" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4576" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4577" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4578" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4588" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Inscribir</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4579" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                        <div class="overline mt-3">Horarios</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4580" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Activar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4581" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4582" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Consultar</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal25" name="P4583" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Desactivar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal25" name="P4584" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Salones</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check ">
+                            <input class="hidden PGlobal26" name="P2705" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Agregar</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal26" name="P2710" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span
+                                class="text-checkbox">Modificar</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Sub-ciclos y periodos</span>
+                    </label>
+                    <div class="grouper">
+                        <div class="overline ">Periodos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2805" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar captura de calificaciones</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2810" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar captura de calificaciones de criterios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2815" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar captura de puntos extra</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2870" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar configuración de criterios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2880" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Consulta de configuración de criterios</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2820" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ingreso de cobros y pagos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2860" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Claves de servicio</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2825" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar asistencia</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2830" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar periodos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2835" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver y agregar periodos</span>
+                        </label>
+                        <div class="overline mt-3">Sub-ciclos</div>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2840" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Abrir / Cerrar sub-ciclos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2845" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar sub-ciclos</span>
+                        </label>
+                        <label class="material-check ">
+                            <input class="hidden PGlobal27" name="P2850" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Modificar sub-ciclos</span>
+                        </label>
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal27" name="P2851" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Duplicar sub-ciclos</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Ver sesión del usuario</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal28" name="P2910" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Ver sesión del usuario</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Módulo de credenciales</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal29" name="P4588" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Acceso a módulo de credenciales</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Conversión de valores</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal30" name="P3000" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Conversión de valores</span>
+                        </label>
+                    </div>
+                    <label class="material-check">
+                        <input class="hidden" type="checkbox">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span
+                            class="text-checkbox">Agregar operador</span>
+                    </label>
+                    <div class="grouper">
+                        <label class="material-check mb-0">
+                            <input class="hidden PGlobal31" name="P4905" type="checkbox">
+                            <span class="material-check__checkbox-container"><i
+                                    class="material-check__checkbox"></i></span><span class="text-checkbox">Agregar operador</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

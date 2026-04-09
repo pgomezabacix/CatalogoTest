@@ -1,0 +1,2476 @@
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="favicon.ico" rel="shortcut icon" />
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
+    <!-- Fontawesome 5 -->
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/testing.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Catalogo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="shadow-bar top-bar-wrapper">
+      <nav
+        class="navbar-header navbar navbar-expand navbar-light fixed-top navbar__main dashboard-padding"
+      >
+        <div class="action-item d-lg-none" id="hamburguer">
+          <i class="fas fa-bars action-item__icon"></i>
+        </div>
+
+        <div id="secondary-breadcrumbs">
+          <div class="action-item d-lg-none" data-toggle="dropdown">
+            <i class="fas fa-ellipsis-vertical action-item__icon"></i>
+          </div>
+          <div
+            class="dropdown-menu dropdown-menu--auto-width"
+            x-placement="bottom-start"
+          >
+            <a class="dropdown-item">Panel de control </a>
+
+            <a class="dropdown-item">Planes de estudios </a>
+
+            <a class="dropdown-item">Secundaria </a>
+
+            <a class="dropdown-item">Grupos </a>
+
+            <a class="dropdown-item active">Crear grupo</a>
+          </div>
+        </div>
+
+        <a class="navbar-brand">
+          <img
+            class="d-none d-lg-block img-filter"
+            src="/images/logoMattildaAlgebraix.png"
+            height="30"
+          />
+        </a>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav" id="breadcrumb-nav">
+            <li
+              class="nav-item d-none d-lg-block text-truncate"
+              id="BREADCRUMBS"
+            >
+              <span class="breadcrumb">
+                <a
+                  class=""
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  ><i class="fas fa-ellipsis-vertical px-2"></i
+                ></a>
+                <div
+                  id="breadcrumb-dropdown"
+                  class="dropdown-menu dropdown-menu--nav-overflow dropdown-menu--auto-width"
+                  x-placement="bottom-start"
+                  style="display: none"
+                >
+                  <a class="dropdown-item">Panel de control </a>
+
+                  <a class="dropdown-item">Planes de estudios </a>
+
+                  <a class="dropdown-item">Secundaria </a>
+
+                  <a class="dropdown-item">Grupos </a>
+
+                  <a class="dropdown-item active" href="javascript:return null;"
+                    >Crear grupo</a
+                  >
+                </div>
+
+                <span class="breadcrumb-item">
+                  <a class="">Panel de control </a>
+                </span>
+
+                <span class="breadcrumb-item">
+                  <a class="">Planes de estudios </a>
+                </span>
+
+                <span class="breadcrumb-item">
+                  <a class="">Secundaria </a>
+                </span>
+
+                <span class="breadcrumb-item">
+                  <a class="">Grupos </a>
+                </span>
+
+                <span class="breadcrumb-item active"> Crear grupo </span>
+              </span>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item material-form d-none d-md-block">
+              <form data-block_form_button="1">
+                <div
+                  class="material-form__group-wrapper material-form__group-wrapper-round w--15 mt-1"
+                >
+                  <div
+                    class="material-form--group material-form--group-round material-form--group-dark-mode-light"
+                  >
+                    <div class="material-form__action">
+                      <button class="btn material-form__action-btn">
+                        <i
+                          class="fa fa-magnifying-glass text-dark material-form__action-icon"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="material-form__container">
+                      <input
+                        type="text"
+                        class="material-form__input--sm material-form__input--left"
+                        placeholder="Buscar usuario"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="material-form__action">
+                      <div
+                        class="btn material-form__action-btn hidden"
+                        id="search-clear"
+                      >
+                        <i
+                          class="fa fa-xmark text-dark material-form__action-icon"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </li>
+
+            <li class="nav-item">
+              <div class="action-item" id="help-pill">
+                <span class="action-item__notification-pill bg-purple"></span>
+                <i class="fa fa-circle-question action-item__icon"></i>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown w-min--4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                ES
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu--condensed"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="fas fa-check text-blue dropdown-menu__icon"></i>
+                  Español
+                </a>
+                <a class="dropdown-item">
+                  <i class="dropdown-menu__icon"></i>
+                  English
+                </a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i
+                  class="fas fa-circle-user avatar-icon fas fa-circle-user text-red"
+                ></i
+                ><span class="nav-text text-truncate">Soporte Técnico</span>
+              </a>
+
+              <div
+                class="dropdown-menu dropdown-menu-right dropdown-menu--auto-width"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="fas fa-headset dropdown-menu__icon"></i>
+                  Soporte técnico
+                </a>
+
+                <a class="dropdown-item"
+                  ><i class="fa fa-circle-info dropdown-menu__icon"></i>Soporte
+                  Técnico
+                </a>
+
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  id="dark-mode-switch"
+                  data-theme_value="0"
+                  ><i class="far dropdown-menu__icon fa-moon"></i>
+
+                  Ver en modo nocturno
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item"
+                  ><i class="fas fa-right-from-bracket dropdown-menu__icon"></i
+                  >Finalizar sesión
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="navbar-tabs dashboard-padding">
+        <ul class="nav nav--scrollable w-100">
+          <li>
+            <a class="nav--tab active" href="#">Recibidos</a>
+          </li>
+          <li>
+            <a class="nav--tab" href="#">Enviados</a>
+          </li>
+          <li class="d-xs-block d-none">
+            <a class="nav--tab" href="#">Redactar</a>
+          </li>
+          <li class="d-sm-block d-none">
+            <a
+              class="nav--tab dropdown-toggle"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Dropdown</a
+            >
+            <div
+              class="dropdown-menu dropdown-menu--nav-overflow dropdown-menu--condensed"
+            >
+              <div class="dropdown-header">Dropdown header</div>
+              <a class="dropdown-item" href="#">General</a>
+              <a class="dropdown-item" href="#">Contactos</a>
+              <a class="dropdown-item" href="#">Anotaciones</a>
+              <a class="dropdown-item" href="#"
+                ><i class="fas fa-folder dropdown-menu__icon"></i> Documentos</a
+              >
+              <a class="dropdown-item" href="#">Reportes</a>
+              <a class="dropdown-item" href="#">Historial</a>
+              <a class="dropdown-item" href="#">Constancias</a>
+              <a class="dropdown-item" href="#">Servicio social</a>
+              <a class="dropdown-item" href="#">Archivos compartidos</a>
+              <a class="dropdown-item" href="#">Encuestas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Desactivar</a>
+            </div>
+          </li>
+          <li class="d-sm-block d-none">
+            <a class="nav--tab disabled" href="#">Disabled</a>
+          </li>
+          <li class="">
+            <a
+              class="nav--tab"
+              data-toggle="dropdown"
+              href="#"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa fa-ellipsis"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu--right">
+              <a class="nav--tab disabled d-block d-sm-none" href="#"
+                >Disabled</a
+              >
+              <a
+                class="nav--tab dropdown-toggle d-block d-sm-none"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div
+                class="dropdown-menu dropdown-menu--nav-overflow dropdown-menu--condensed"
+              >
+                <div class="dropdown-header">Dropdown header</div>
+                <a class="dropdown-item" href="#">General</a>
+                <a class="dropdown-item" href="#">Contactos</a>
+                <a class="dropdown-item" href="#">Anotaciones</a>
+                <a class="dropdown-item" href="#"
+                  ><i class="fas fa-folder dropdown-menu__icon"></i>
+                  Documentos</a
+                >
+                <a class="dropdown-item" href="#">Reportes</a>
+                <a class="dropdown-item" href="#">Historial</a>
+                <a class="dropdown-item" href="#">Constancias</a>
+                <a class="dropdown-item" href="#">Servicio social</a>
+                <a class="dropdown-item" href="#">Archivos compartidos</a>
+                <a class="dropdown-item" href="#">Encuestas</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Desactivar</a>
+              </div>
+              <a class="nav--tab d-block d-xs-none" href="#">Redactar</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gallery d-none">
+      <div class="gallery__header mb-2">
+        <span class="gallery__text">
+          <span class="gallery__text--primary"> </span>
+          <span class="gallery__text--secondary"> </span>
+        </span>
+        <div class="gallery__header--close" onclick="closeGallery()">
+          <i class="fas fa-xmark ml-auto text-white"></i>
+        </div>
+      </div>
+      <div class="gallery__body">
+        <div class="action-item prev" onclick="plusSlides(-1)">
+          <i class="fas fa-angle-left action-item__icon text-white"></i>
+        </div>
+        <div class="action-item next" onclick="plusSlides(1)">
+          <i class="fa fa-angle-right action-item__icon text-white"></i>
+        </div>
+      </div>
+      <div class="dot-container"></div>
+      <div class="gallery__footer">
+        <i class="fas fa-minus gallery__footer--icon minus"></i>
+        <div class="position-relative">
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="slider"
+            oninput="deepDive(value)"
+            id="input-range"
+          />
+          <span class="slider__bubble" id="input-range-bubble">0</span>
+        </div>
+        <i class="fas fa-plus gallery__footer--icon plus"></i>
+        <div class="text-center slide-counter text-white">
+          <span class="img-count"></span> / <span class="dots-length"></span>
+        </div>
+      </div>
+    </div>
+
+    <style type="text/css">
+      .elevated-container {
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow:
+          0 2px 1px -1px rgba(0, 0, 0, 0.2),
+          0 1px 1px 0 rgba(0, 0, 0, 0.14),
+          0 1px 3px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      .soft-corners {
+        border-radius: 0.25rem;
+      }
+
+      .side-margins {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    </style>
+    <section class="dashboard-padding dashboard-padding-top">
+      <div class="mt-4rem">
+        <main></main>
+      </div>
+    </section>
+
+    <!-- router js vanilla -->
+    <script src="./js/vendors/jquery/jquery.min.js"></script>
+    <script src="jsRouter/router/page.js"></script>
+    <script src="jsRouter/router/layout.js"></script>
+    <script src="jsRouter/router/router.js"></script>
+    <script src="jsRouter/router/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--<script type="text/javascript" src="/js/vendors/vendors.min.js"></script>
+<script type="text/javascript" src="/js/algebraix/algebraix.min.js"></script>-->
+
+    <script src="./js/vendors/chart/chart.js"></script>
+    <script src="./js/vendors/select2/select2.js"></script>
+    <script src="./js/vendors/moment/moment-with-locales.min.js"></script>
+    <script src="./js/vendors/datetimepicker/datetimepicker.js"></script>
+    <script src="./js/vendors/footable/footable.js"></script>
+
+    <script src="./js/vendors/fullcalendar/core.js"></script>
+    <script src="./js/vendors/fullcalendar/daygrid.js"></script>
+    <script src="./js/algebraix/standard/standard.functions.js"></script>
+
+    <!--<script src='js/vendors/fullcalendar/fullcalendar.js'></script>-->
+
+    <script type="text/javascript">
+      // Global sidebar state management
+      window.SidebarManager = {
+        storageKey: "sidebarState",
+        hoverTimeout: null,
+        leaveTimeout: null,
+        initialized: false,
+
+        // Initialize sidebar functionality
+        init: function () {
+          try {
+            const sideMenu = document.getElementById("side-menu");
+            if (!sideMenu) return;
+
+            const sideMenuIcon = sideMenu.querySelector(
+              ".nav-drawer__link.d-none.d-lg-flex .nav-drawer__icon.nav-tabs-hamburguer",
+            );
+            if (!sideMenuIcon) {
+              console.log(
+                "Hamburger icon not found with selector: .nav-drawer__link.d-none.d-lg-flex .nav-drawer__icon.nav-tabs-hamburguer",
+              );
+              return;
+            }
+
+            const collapseButton = sideMenuIcon.nextElementSibling;
+            const expandSidebarButton = sideMenuIcon.parentElement;
+            const paddedElements =
+              document.querySelectorAll(".dashboard-padding");
+
+            console.log("Found hamburger elements:", {
+              sideMenuIcon: !!sideMenuIcon,
+              collapseButton: !!collapseButton,
+              expandSidebarButton: !!expandSidebarButton,
+            });
+
+            // Set up popover
+            sideMenuIcon.setAttribute("data-toggle", "popover");
+            sideMenuIcon.setAttribute("data-placement", "right");
+            sideMenuIcon.setAttribute("data-content", "Expandir");
+            $(sideMenuIcon).popover({
+              trigger: "manual",
+              boundary: "window",
+              placement: "right",
+            });
+
+            // Apply saved state
+            this.applySavedState();
+
+            // Mark as initialized
+            sideMenu.setAttribute("data-sidebar-initialized", "true");
+            this.initialized = true;
+          } catch (error) {
+            console.error("Sidebar initialization error:", error);
+          }
+        },
+
+        // Apply saved state from localStorage
+        applySavedState: function () {
+          const sideMenu = document.getElementById("side-menu");
+          if (!sideMenu) return;
+
+          const sideMenuIcon = sideMenu.querySelector(
+            ".nav-drawer__link.d-none.d-lg-flex .nav-drawer__icon.nav-tabs-hamburguer",
+          );
+          if (!sideMenuIcon) return;
+
+          const collapseButton = sideMenuIcon.nextElementSibling;
+          const paddedElements =
+            document.querySelectorAll(".dashboard-padding");
+          const savedState = localStorage.getItem(this.storageKey);
+
+          console.log("Applying saved state:", savedState);
+
+          if (savedState === "expanded") {
+            this.toggleSidebar(true, true); // true = isPermanent (restoring saved state)
+          } else if (savedState !== "collapsed") {
+            localStorage.setItem(this.storageKey, "collapsed");
+            this.toggleSidebar(false, true); // true = isPermanent
+          } else {
+            // Ensure collapsed state is applied
+            this.toggleSidebar(false, true); // true = isPermanent
+          }
+        },
+
+        // Toggle sidebar state
+        toggleSidebar: function (value, isPermanent = false) {
+          console.log(
+            "toggleSidebar called with value:",
+            value,
+            "isPermanent:",
+            isPermanent,
+          );
+          const sideMenu = document.getElementById("side-menu");
+          if (!sideMenu) {
+            console.log("Side menu not found!");
+            return;
+          }
+
+          const sideMenuIcon = sideMenu.querySelector(
+            ".nav-drawer__link.d-none.d-lg-flex .nav-drawer__icon.nav-tabs-hamburguer",
+          );
+          if (!sideMenuIcon) {
+            console.log("Side menu icon not found!");
+            return;
+          }
+
+          const collapseButton = sideMenuIcon.nextElementSibling;
+          const expandSidebarButton = sideMenuIcon.parentElement;
+          const paddedElements =
+            document.querySelectorAll(".dashboard-padding");
+
+          console.log("Found elements:", {
+            sideMenu: !!sideMenu,
+            sideMenuIcon: !!sideMenuIcon,
+            collapseButton: !!collapseButton,
+            expandSidebarButton: !!expandSidebarButton,
+            paddedElements: paddedElements.length,
+          });
+
+          // Only apply padding when permanently expanded (via click)
+          if (value && isPermanent) {
+            paddedElements.forEach((element) => {
+              element.classList.add("expanded-sidebar");
+            });
+            if (collapseButton) {
+              collapseButton.innerText = "Colapsar";
+              console.log("Set button text to: Colapsar");
+            }
+          } else if (!value || !isPermanent) {
+            // Remove padding when collapsed or when just hovering
+            paddedElements.forEach((element) => {
+              element.classList.remove("expanded-sidebar");
+            });
+            if (collapseButton) {
+              collapseButton.innerText = "Fijar";
+              console.log("Set button text to: Fijar");
+            }
+          }
+
+          sideMenu.classList.toggle("expanded-sidebar", value);
+          if (expandSidebarButton) expandSidebarButton.blur();
+          sideMenu.focus();
+
+          console.log("Sidebar classes after toggle:", sideMenu.className);
+        },
+
+        // Start expand timer
+        startExpandTimer: function () {
+          if (localStorage.getItem(this.storageKey) === "collapsed") {
+            clearTimeout(this.leaveTimeout);
+            this.hoverTimeout = setTimeout(
+              () => this.toggleSidebar(true, false),
+              300,
+            );
+          }
+        },
+
+        // Start collapse timer
+        startCollapseTimer: function () {
+          if (localStorage.getItem(this.storageKey) === "collapsed") {
+            clearTimeout(this.hoverTimeout);
+            this.leaveTimeout = setTimeout(
+              () => this.toggleSidebar(false, false),
+              200,
+            );
+          }
+        },
+
+        // Manage popover
+        managePopover: function (isHover) {
+          const sideMenuIcon = document.querySelector(
+            "#side-menu .nav-drawer__link.d-none.d-lg-flex .nav-drawer__icon.nav-tabs-hamburguer",
+          );
+          if (!sideMenuIcon) return;
+
+          if (isHover) {
+            $(sideMenuIcon).popover("show");
+          } else {
+            $(sideMenuIcon).popover("hide");
+          }
+        },
+
+        // Handle click on expand/collapse button
+        handleButtonClick: function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          clearTimeout(this.hoverTimeout);
+          clearTimeout(this.leaveTimeout);
+
+          const isPermanentlyExpanded =
+            localStorage.getItem(this.storageKey) === "expanded";
+          const newPermanentStateIsExpanded = !isPermanentlyExpanded;
+
+          console.log("Hamburger button clicked!");
+          console.log(
+            "Current state:",
+            isPermanentlyExpanded ? "expanded" : "collapsed",
+          );
+          console.log(
+            "New state:",
+            newPermanentStateIsExpanded ? "expanded" : "collapsed",
+          );
+
+          localStorage.setItem(
+            this.storageKey,
+            newPermanentStateIsExpanded ? "expanded" : "collapsed",
+          );
+          this.toggleSidebar(newPermanentStateIsExpanded, true); // true = isPermanent
+          this.managePopover();
+        },
+      };
+
+      // Event delegation setup
+      $(document).ready(function () {
+        // Initialize sidebar on page load
+        window.SidebarManager.init();
+
+        // Set up event delegation for mouse events
+        $(document).on("mouseenter", "#side-menu", function (e) {
+          // Don't trigger expansion if hovering over the hamburger button
+          if (e.target.closest(".nav-drawer__link.d-none.d-lg-flex")) {
+            console.log("Hovering over hamburger button, not expanding");
+            return;
+          }
+          window.SidebarManager.startExpandTimer();
+        });
+
+        $(document).on("mouseleave", "#side-menu", function (e) {
+          // Don't trigger collapse if leaving to the hamburger button
+          if (
+            e.relatedTarget &&
+            e.relatedTarget.closest(".nav-drawer__link.d-none.d-lg-flex")
+          ) {
+            console.log("Leaving to hamburger button, not collapsing");
+            return;
+          }
+          window.SidebarManager.startCollapseTimer();
+        });
+
+        // Handle expand/collapse button hover (only the hamburger button)
+        // Note: The hamburger button should NOT trigger hover expansion, only permanent toggle
+        $(document).on(
+          "mouseenter",
+          "#side-menu .nav-drawer__link.d-none.d-lg-flex",
+          function (e) {
+            console.log("Hamburger button hover");
+            e.stopPropagation(); // Prevent triggering the sidebar hover
+            // Only show popover, don't trigger expansion
+            const sideMenu = document.getElementById("side-menu");
+            if (sideMenu && !sideMenu.classList.contains("expanded-sidebar")) {
+              window.SidebarManager.managePopover(true);
+            }
+          },
+        );
+
+        $(document).on(
+          "mouseleave",
+          "#side-menu .nav-drawer__link.d-none.d-lg-flex",
+          function (e) {
+            console.log("Hamburger button leave");
+            e.stopPropagation(); // Prevent triggering the sidebar hover
+            // Only hide popover, don't trigger expansion
+            window.SidebarManager.managePopover(false);
+          },
+        );
+
+        // Handle expand/collapse button click (only the hamburger button)
+        $(document).on(
+          "click",
+          "#side-menu .nav-drawer__link.d-none.d-lg-flex",
+          function (e) {
+            console.log("Hamburger button clicked!");
+            window.SidebarManager.handleButtonClick(e);
+          },
+        );
+      });
+
+      // Function to reinitialize sidebar after DOM changes
+      window.reinitializeSidebar = function () {
+        console.log("Reinitializing sidebar...");
+        window.SidebarManager.init();
+      };
+
+      // Set up a MutationObserver to automatically reinitialize when the menu changes
+      $(document).ready(function () {
+        const observer = new MutationObserver(function (mutations) {
+          mutations.forEach(function (mutation) {
+            if (mutation.type === "childList") {
+              // Check if the side-menu content has changed
+              const sideMenu = document.getElementById("side-menu");
+              if (sideMenu && mutation.target.contains(sideMenu)) {
+                console.log("Side menu content changed, reinitializing...");
+                // Small delay to ensure DOM is fully updated
+                setTimeout(() => {
+                  window.SidebarManager.init();
+                }, 100);
+              }
+            }
+          });
+        });
+
+        // Start observing the document body for changes
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      });
+
+      $("body").scrollspy({ target: "#navbar-example" });
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("gallery-slides");
+        var dots = document.getElementsByClassName("gallery-dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" dot-active", "");
+        }
+        console.log(slideIndex);
+        // console.log(slides);
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " dot-active";
+      }
+
+      function closeGallery() {
+        $(".gallery").addClass("d-none");
+      }
+
+      function deepDive() {
+        var zoomer = document.getElementById("input-range");
+        var hubblepic = document.getElementsByClassName("gallery-img");
+
+        [...hubblepic].forEach(function (element) {
+          zoomlevel = 1 + zoomer.valueAsNumber / 100;
+          element.style.webkitTransform = "scale(" + zoomlevel + ")";
+          element.style.transform = "scale(" + zoomlevel + ")";
+        });
+      }
+
+      $(".nav--tab.disabled").click(function () {
+        $(".nav-drawer").toggleClass("show");
+      });
+
+      function select2() {
+        $(".js-example-basic-single").select2();
+        $(".js-example-basic-multiple").select2();
+      }
+
+      function dateTime() {
+        $("#datetimepicker1").datetimepicker({
+          locale: "es",
+        });
+        $("#datetimepicker2").datetimepicker({
+          format: "LT",
+        });
+        $("#datetimepicker3").datetimepicker({
+          format: "L",
+        });
+        $("#datetimepicker4").datetimepicker({
+          locale: "ru",
+        });
+        $("#datetimepicker5").datetimepicker({
+          locale: "ru",
+        });
+        $("#datetimepicker6").datetimepicker();
+      }
+      // Codigo de filtros
+      // En una pantalla real esto se ejecuta al cargar la pantalla. La ultima linea se quita
+      enableFilters = function () {
+        let subtitulo = null;
+        let searchBox = document.getElementById("searchInput");
+        let cartaPermisosGlobales =
+          document.getElementById("global_permissions");
+        const permisos = [
+          ...cartaPermisosGlobales.querySelectorAll(
+            "label.material-check,.overline, div.grouper>label.material-check",
+          ),
+        ] // buscar los elementos que
+          // contienen el texto contra el que se va a comparar el search string
+          .reduce((todos, presente, indice) => {
+            if (!presente.closest(".grouper") && presente.matches("label")) {
+              subtitulo = null;
+              todos.push({
+                elementClasses: presente.classList,
+                children: [],
+                string: remove_accents(
+                  presente
+                    .querySelector(".text-checkbox")
+                    .innerText.trim()
+                    .toLowerCase(),
+                ),
+                grouper: presente.nextElementSibling.matches(".grouper")
+                  ? presente.nextElementSibling
+                  : false,
+              });
+            } else {
+              const categoria = todos[todos.length - 1];
+              if (presente.matches(".overline")) {
+                subtitulo = {
+                  elementClasses: presente.classList,
+                  children: [],
+                  string: remove_accents(
+                    presente.innerText.trim().toLowerCase(),
+                  ),
+                };
+                categoria.children.push(subtitulo);
+              } else {
+                let permiso = {
+                  elementClasses: presente.classList,
+                  string: remove_accents(
+                    presente
+                      .querySelector(".text-checkbox")
+                      .innerText.trim()
+                      .toLowerCase(),
+                  ),
+                };
+                if (subtitulo) {
+                  subtitulo.children.push(permiso);
+                } else {
+                  categoria.children.push(permiso);
+                }
+              }
+            }
+            return todos;
+          }, []); // 'todos' comienza como un arreglo vacío. Al final, el arreglo resultante se guarda en 'permisos'
+        let currentSearch = "";
+        searchBox.addEventListener("input", (e) => {
+          let newData = null;
+          if (!!e.data) {
+            // Si se intenta agregar texto al search box
+            // Limpiar la entrada y reemplazar el valor actual del input (con caracteres inválidos), por un string limpio
+            e.target.value = e.target.value.replace(
+              /[+=\-_/\\!?,.\[\]{}()$%^*#@`~:;"<>&|]/,
+              "",
+            );
+            // newData es un booleano que sirve para saber si el caracter introducido no fue eliminado
+            newData = !!e.data.replace(
+              /[+=\-_/\\!?,.\[\]{}()$%^*#@`~:;"<>&|]/,
+              "",
+            ).length;
+          }
+          const searchString = remove_accents(
+            e.target.value.trim().toLowerCase(),
+          );
+          if (searchString.length > 0) {
+            // Si hay algo en el search box
+            if (newData || e.target.value !== currentSearch) {
+              // Si hubo un cambio en el search box, sea texto nuevo
+              // o texto borrado
+              currentSearch = e.target.value;
+              permisos.forEach((c) => {
+                // Nivel subtitulo o permiso
+                let catMatch = c.string.match(searchString);
+                let catShown = c.children.reduce((spShown, sp) => {
+                  let shown = false;
+                  let spMatch = sp.string.match(searchString) || catMatch;
+                  if (sp.children) {
+                    shown = sp.children.reduce((pShown, s) => {
+                      let unmatchedPermission =
+                        !s.string.match(searchString) && !spMatch;
+                      s.elementClasses.toggle("d-none", unmatchedPermission);
+                      return pShown || !unmatchedPermission;
+                    }, false);
+                    sp.elementClasses.toggle("d-none", !shown);
+                  } else {
+                    let unmatchedPermission = !spMatch;
+                    sp.elementClasses.toggle("d-none", unmatchedPermission);
+                    shown = !unmatchedPermission;
+                  }
+
+                  return spShown || shown;
+                }, false);
+
+                // Nivel categoria
+                c.elementClasses.toggle("d-none", !catShown);
+                if (c.grouper) {
+                  c.grouper.classList.toggle("d-none", !catShown);
+                }
+              });
+              cartaPermisosGlobales.classList.toggle(
+                "d-none",
+                permisos.every((x) => x.elementClasses.contains("d-none")),
+              );
+            }
+          } else {
+            // Si no hay string para filtrar, mostrar todo lo oculto
+            permisos.forEach((x) => {
+              x.elementClasses.remove("d-none");
+              if (x.grouper) {
+                x.grouper.classList.remove("d-none");
+              }
+              x.children.forEach((sp) => {
+                sp.elementClasses.remove("d-none");
+                if (sp.children) {
+                  sp.children.forEach((p) => {
+                    p.elementClasses.remove("d-none");
+                  });
+                }
+              });
+            });
+            cartaPermisosGlobales.classList.toggle(
+              "d-none",
+              permisos.every((x) => x.elementClasses.contains("d-none")),
+            );
+          }
+        });
+        document.getElementById("filterStarter").remove();
+      };
+
+      function makeFootable() {
+        $(".footable").footable();
+      }
+
+      function graphMultiBar() {
+        let myChart = document.getElementById("myChart1").getContext("2d");
+
+        /* if(colors.length >= 1){
+                 json.chart_data.datasets.forEach(function (value, index) {
+                     value.backgroundColor = colors[index];
+                 });
+             }*/
+
+        var jsonData = {
+          chart_data: {
+            datasets: [
+              {
+                data: [2, 4, 9],
+                backgroundColor: "#4a7dff",
+                label: "Ausencias",
+              },
+              {
+                data: [1, 3, 3],
+                backgroundColor: "#ffc106",
+                label: "Retardos",
+              },
+            ],
+            labels: ["1er. Trimestre", "2do. Trimestre", "3er. Trimestre"],
+          },
+          options: {
+            scales: {
+              yAxes: [
+                {
+                  ticks: { max: 10, min: 0, stepSize: 1 },
+                  scaleLabel: { display: "true", labelString: "Cantidad" },
+                },
+              ],
+              xAxes: [
+                { scaleLabel: { display: "true", labelString: "Periodo" } },
+              ],
+            },
+            legend: { labels: { fontColor: "" } },
+          },
+        };
+
+        new Chart(myChart, {
+          type: "bar",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [jsonData],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+            //para stack descomentarlo
+            /*scales: {
+                        xAxes: [{
+                            stacked: true
+                        }],
+                        yAxes: [{
+                            stacked: true
+                        }]
+                    }*/
+          },
+          plugins: [
+            {
+              beforeInit: function (chart) {
+                chart.data.labels.forEach(function (value, index, array) {
+                  var maxwidth = 10;
+                  var sections = [];
+                  var words = value.split(" ");
+                  var temp = "";
+
+                  words.forEach(function (item, index) {
+                    if (temp.length > 0) {
+                      var concat = temp + " " + item;
+
+                      if (concat.length > maxwidth) {
+                        sections.push(temp);
+                        temp = "";
+                      } else {
+                        if (index == words.length - 1) {
+                          sections.push(concat);
+                          return;
+                        } else {
+                          temp = concat;
+                          return;
+                        }
+                      }
+                    }
+
+                    if (index == words.length - 1) {
+                      sections.push(item);
+                      return;
+                    }
+
+                    if (item.length < maxwidth) {
+                      temp = item;
+                    } else {
+                      sections.push(item);
+                    }
+                  });
+                  array[index] = sections;
+                });
+              },
+            },
+          ],
+        });
+      }
+
+      function graphBar() {
+        let myChart = document.getElementById("myChart2").getContext("2d");
+
+        new Chart(myChart, {
+          type: "bar",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+            options: {
+              title: {
+                display: true,
+                text: "Largest Cities in Mexico",
+              },
+              legend: {
+                labels: {
+                  fontColor: "Roboto",
+                },
+                position: "left",
+              },
+            },
+            plugins: [
+              {
+                beforeInit: function (chart) {
+                  chart.data.labels.forEach(function (value, index, array) {
+                    var maxwidth = 10;
+                    var sections = [];
+                    var words = value.split(" ");
+                    var temp = "";
+
+                    words.forEach(function (item, index) {
+                      if (temp.length > 0) {
+                        var concat = temp + " " + item;
+
+                        if (concat.length > maxwidth) {
+                          sections.push(temp);
+                          temp = "";
+                        } else {
+                          if (index == words.length - 1) {
+                            sections.push(concat);
+                            return;
+                          } else {
+                            temp = concat;
+                            return;
+                          }
+                        }
+                      }
+
+                      if (index == words.length - 1) {
+                        sections.push(item);
+                        return;
+                      }
+
+                      if (item.length < maxwidth) {
+                        temp = item;
+                      } else {
+                        sections.push(item);
+                      }
+                    });
+                    array[index] = sections;
+                  });
+                },
+              },
+            ],
+          },
+        });
+      }
+
+      function graphHorizontalBar() {
+        let myChart = document.getElementById("myChart3").getContext("2d");
+
+        new Chart(myChart, {
+          type: "horizontalBar",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+          },
+          plugins: [
+            {
+              beforeInit: function (chart) {
+                chart.data.labels.forEach(function (value, index, array) {
+                  var maxwidth = 10;
+                  var sections = [];
+                  var words = value.split(" ");
+                  var temp = "";
+
+                  words.forEach(function (item, index) {
+                    if (temp.length > 0) {
+                      var concat = temp + " " + item;
+
+                      if (concat.length > maxwidth) {
+                        sections.push(temp);
+                        temp = "";
+                      } else {
+                        if (index == words.length - 1) {
+                          sections.push(concat);
+                          return;
+                        } else {
+                          temp = concat;
+                          return;
+                        }
+                      }
+                    }
+
+                    if (index == words.length - 1) {
+                      sections.push(item);
+                      return;
+                    }
+
+                    if (item.length < maxwidth) {
+                      temp = item;
+                    } else {
+                      sections.push(item);
+                    }
+                  });
+                  array[index] = sections;
+                });
+              },
+            },
+          ],
+        });
+      }
+
+      function graphLine() {
+        let myChart = document.getElementById("myChart4").getContext("2d");
+
+        new Chart(myChart, {
+          type: "line",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+          },
+          plugins: [
+            {
+              beforeInit: function (chart) {
+                chart.data.labels.forEach(function (value, index, array) {
+                  var maxwidth = 10;
+                  var sections = [];
+                  var words = value.split(" ");
+                  var temp = "";
+
+                  words.forEach(function (item, index) {
+                    if (temp.length > 0) {
+                      var concat = temp + " " + item;
+
+                      if (concat.length > maxwidth) {
+                        sections.push(temp);
+                        temp = "";
+                      } else {
+                        if (index == words.length - 1) {
+                          sections.push(concat);
+                          return;
+                        } else {
+                          temp = concat;
+                          return;
+                        }
+                      }
+                    }
+
+                    if (index == words.length - 1) {
+                      sections.push(item);
+                      return;
+                    }
+
+                    if (item.length < maxwidth) {
+                      temp = item;
+                    } else {
+                      sections.push(item);
+                    }
+                  });
+                  array[index] = sections;
+                });
+              },
+            },
+          ],
+        });
+      }
+
+      function graphPie() {
+        let myChart = document.getElementById("myChart5").getContext("2d");
+
+        new Chart(myChart, {
+          type: "pie",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+          },
+          plugins: [
+            {
+              beforeInit: function (chart) {
+                chart.data.labels.forEach(function (value, index, array) {
+                  var maxwidth = 10;
+                  var sections = [];
+                  var words = value.split(" ");
+                  var temp = "";
+
+                  words.forEach(function (item, index) {
+                    if (temp.length > 0) {
+                      var concat = temp + " " + item;
+
+                      if (concat.length > maxwidth) {
+                        sections.push(temp);
+                        temp = "";
+                      } else {
+                        if (index == words.length - 1) {
+                          sections.push(concat);
+                          return;
+                        } else {
+                          temp = concat;
+                          return;
+                        }
+                      }
+                    }
+
+                    if (index == words.length - 1) {
+                      sections.push(item);
+                      return;
+                    }
+
+                    if (item.length < maxwidth) {
+                      temp = item;
+                    } else {
+                      sections.push(item);
+                    }
+                  });
+                  array[index] = sections;
+                });
+              },
+            },
+          ],
+        });
+      }
+
+      function graphDoughnut() {
+        let myChart = document.getElementById("myChart6").getContext("2d");
+
+        new Chart(myChart, {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+          },
+          plugins: [
+            {
+              beforeInit: function (chart) {
+                chart.data.labels.forEach(function (value, index, array) {
+                  var maxwidth = 10;
+                  var sections = [];
+                  var words = value.split(" ");
+                  var temp = "";
+
+                  words.forEach(function (item, index) {
+                    if (temp.length > 0) {
+                      var concat = temp + " " + item;
+
+                      if (concat.length > maxwidth) {
+                        sections.push(temp);
+                        temp = "";
+                      } else {
+                        if (index == words.length - 1) {
+                          sections.push(concat);
+                          return;
+                        } else {
+                          temp = concat;
+                          return;
+                        }
+                      }
+                    }
+
+                    if (index == words.length - 1) {
+                      sections.push(item);
+                      return;
+                    }
+
+                    if (item.length < maxwidth) {
+                      temp = item;
+                    } else {
+                      sections.push(item);
+                    }
+                  });
+                  array[index] = sections;
+                });
+              },
+            },
+          ],
+        });
+      }
+
+      const example1 = () => {
+        let myChart = document.getElementById("myChart1").getContext("2d");
+
+        let mexPopChart = new Chart(myChart, {
+          type: "doughnut", // bar, horizontalBar, pie, line, radar, doughnut, polarArea
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "#4a7dff",
+                  "#ffc106",
+                  "#f44336",
+                  "#00a56f",
+                  "#8B6BC4",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              labels: {
+                fontColor: "Roboto",
+              },
+              position: "left",
+            },
+          },
+        });
+      };
+
+      const example2 = () => {
+        fetch("http://api.population.io:80/1.0/population/2018/Mexico/")
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            const malePop = data
+              .map((item) => item.males)
+              .reduce((p, c) => p + c, 0);
+            const femalePop = data
+              .map((item) => item.females)
+              .reduce((p, c) => p + c, 0);
+            let myChart = document.getElementById("myChart2").getContext("2d");
+            let mexPopChart = new Chart(myChart, {
+              type: "pie", // bar, horizontalBar, pie, line, radar, doughnut, polarArea
+              data: {
+                labels: ["Male", "Female"],
+                datasets: [
+                  {
+                    label: "Population F/M in Mexico",
+                    backgroundColor: ["rgb(0, 204, 255)", "rgb(255, 102, 204)"],
+                    responsive: true,
+                    data: [
+                      // data goes here
+                      malePop,
+                      femalePop,
+                    ],
+                  },
+                ],
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: "Population in Mexico(2018)",
+                },
+                legend: {
+                  position: "left",
+                },
+              },
+            });
+          });
+      };
+
+      const example3 = () => {
+        let myChart = document.getElementById("myChart3").getContext("2d");
+
+        let mexPopChart = new Chart(myChart, {
+          type: "bar", // bar, horizontalBar, pie, line, radar, doughnut, polarArea
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                backgroundColor: [
+                  "rgb(255, 99, 132)",
+                  "rgb(255, 255, 132)",
+                  "rgb(124, 244, 232)",
+                  "rgb(180, 150, 255)",
+                  "rgb(145, 255, 180)",
+                ],
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              position: "left",
+            },
+          },
+        });
+      };
+
+      const example4 = () => {
+        let myChart = document.getElementById("myChart4").getContext("2d");
+
+        let mexPopChart = new Chart(myChart, {
+          type: "line", // bar, horizontalBar, pie, line, radar, doughnut, polarArea
+          data: {
+            labels: [
+              "Mexico City",
+              "Puebla",
+              "Merida",
+              "Tijuana",
+              "Guadalajara",
+            ],
+            datasets: [
+              {
+                label: "Population in Mexico",
+                borderColor: "#ff6e8f",
+                backgroundColor: "#ff6e8f",
+                fill: false,
+                responsive: true,
+                data: [
+                  // data goes here
+                  12294193, 1590256, 717175, 1376457, 1640589,
+                ],
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Largest Cities in Mexico",
+            },
+            legend: {
+              position: "center",
+            },
+          },
+        });
+      };
+
+      const example5 = () => {
+        var ctx = document.getElementById("myChart5").getContext("2d");
+        window.myLine = Chart.Line(ctx, {
+          data: lineChartData,
+          options: {
+            responsive: true,
+            hoverMode: "index",
+            stacked: false,
+            title: {
+              display: true,
+              text: "Chart.js Line Chart - Multi Axis",
+            },
+            scales: {
+              yAxes: [
+                {
+                  type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                  display: true,
+                  position: "left",
+                  id: "y-axis-1",
+                },
+                {
+                  type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                  display: true,
+                  position: "right",
+                  id: "y-axis-2",
+
+                  gridLines: {
+                    drawOnChartArea: false, // only want the grid lines for one axis to show up
+                  },
+                },
+              ],
+            },
+          },
+        });
+      };
+
+      function tooltipStart() {
+        $("#popover").popover();
+        $("#popover1").popover();
+        $("#popover2").popover();
+        $("#popover3").popover();
+        $("#popover4").popover();
+        $("#popoverTitle").popover();
+        $('[data-toggle="tooltip"]').tooltip();
+      }
+
+      const calendarDefault = () => {
+        var calendarEl = document.getElementById("calendar-default");
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: ["dayGrid"],
+          titleFormat: function (date) {
+            return (
+              date.end.marker
+                .toLocaleDateString("es", { month: "long" })
+                .toUpperCase() +
+              " " +
+              date.end.year
+            );
+          },
+          events: [
+            {
+              start: "2019-08-13",
+              end: "2019-08-13",
+              title: "vacaciones",
+              icon: "note",
+            },
+
+            {
+              start: "2019-08-13",
+              end: "2019-08-13",
+              title: "vacaciones",
+              icon: "note",
+            },
+          ],
+          header: {
+            left: "prev",
+            center: "title",
+            right: "next",
+          },
+          views: {
+            timelineThreeDays: {
+              type: "timeline",
+              duration: { days: 3 },
+            },
+          },
+          eventRender: function (element) {
+            var i = document.createElement("i");
+            element.el.querySelector(".fc-content").prepend(i);
+            element.el.classList.add(element.event._def.extendedProps.icon);
+          },
+          navLinks: false, // can click day/week names to navigate views
+          editable: false,
+          eventLimit: true,
+          selectable: false,
+          locale: "es",
+
+          /*dayPopoverFormat: { month: 'long', weekday: 'long', day: 'numeric' }*/
+          dayPopoverFormat: function (date) {
+            var day = new Date(
+              date.date.year,
+              date.date.month,
+              date.date.day,
+            ).toLocaleDateString("es", { weekday: "long" });
+            return `${day.charAt(0).toUpperCase()}${day.slice(1)}, ${date.date.marker.toLocaleDateString("es", { month: "long" })} ${date.date.day}`;
+          },
+        });
+
+        calendar.render();
+      };
+
+      const calendarStart = () => {
+        var calendarEl = document.getElementById("calendar-start");
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          plugins: ["dayGrid"],
+          defaultView: "dayGridWeek",
+          titleFormat: { month: "short", day: "numeric" },
+          events: [
+            {
+              start: "2019-08-13",
+              end: "2019-08-13",
+              title: "vacaciones",
+              icon: "note",
+            },
+            {
+              start: "2019-08-13",
+              end: "2019-08-13",
+              title: "vacaciones",
+              icon: "note",
+            },
+          ],
+          views: {
+            timelineThreeDays: {
+              type: "timeline",
+              duration: { days: 3 },
+            },
+          },
+          dayPopoverFormat: function (date) {
+            return (
+              date.end.marker
+                .toLocaleDateString("es", { month: "long" })
+                .toUpperCase() +
+              " " +
+              date.end.year
+            );
+          },
+          eventRender: function (element) {
+            var i = document.createElement("i");
+            element.el.querySelector(".fc-content").prepend(i);
+            element.el.classList.add(element.event._def.extendedProps.icon);
+          },
+          navLinks: false, // can click day/week names to navigate views
+          editable: false,
+          eventLimit: true,
+          selectable: false,
+          locale: "es",
+          header: false,
+          contentHeight: 180,
+          weekends: true,
+          displayEventTime: false,
+          selectHelper: true,
+          columnHeaderFormat: { weekday: "short", day: "numeric" },
+        });
+
+        calendar.render();
+      };
+
+      /*function calendar() {
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'timelineDay,timelineThreeDays,agendaWeek,month,listWeek'
+                },
+                views: {
+                    timelineThreeDays: {
+                        type: 'timeline',
+                        duration: {days: 3}
+                    }
+                },
+                events: [
+                    {id: '1', resourceId: 'd', start: '2018-12-06', end: '2018-12-08', title: 'event 3'},
+                    {id: '2', resourceId: 'd', start: '2018-12-06', end: '2018-12-08', title: 'event 3'},
+                    {id: '3', resourceId: 'd', start: '2018-12-06', end: '2018-12-08', title: 'event 3'},
+                    {id: '4', resourceId: 'd', start: '2018-12-06', end: '2018-12-08', title: 'event 3'},
+    
+                ],
+                navLinks: true, // can click day/week names to navigate views
+                selectable: true,
+                selectHelper: true,
+                editable: true,
+                eventLimit: true,
+                dayClick: function (algo) {
+                    alert(algo);
+                    alert('a day has been clicked!');
+                },
+                select: function(info) {
+                    alert('selected ' + info.startStr + ' to ' + info.endStr + ' on resource ' + info.resource.id);
+                }
+            });
+        }
+    
+        function calendarDefault() {
+            $('#calendar-default').fullCalendar({
+                header: {
+                    left: 'prev',
+                    center: 'title',
+                    right: 'next'
+                },
+                //defaultDate: '[%  data.date_info.year %]-[% date_info_month(data.date_info.month) %]-01',
+                timeFormat: 'h(:hh)A',
+                navLinks: false, // can click day/week names to navigate views
+                editable: true,
+                eventLimit: true, // allow "more" link when too many events
+                height: "auto",
+                //locale: '[% s.language_preference == 'ES' ? 'es' : 'en' %]',
+                //events: source,
+                /!*  eventRender: function (event, element, view) {
+    
+                    var i = document.createElement('i');
+                    element.find('div.fc-content').prepend(i);
+                    element[0].classList.add(event.icon);
+                  }*!/
+            });
+        }
+        function calendarStartDefault() {
+        $('#calendar-start-default').fullCalendar({
+            defaultView: 'basicWeek',
+            /!*events: [
+                [% FOREACH event IN data.upcoming_events %]
+                [% end_date =  event.end_date_normal%]
+        [% IF event.due_date_normal != event.end_date_normal%]
+        [% end_date =  event.end_date_normal _ 'T23:59:00' %]
+        [% END %]
+        { start: '[% event.due_date_normal %]', end: '[% end_date %]', title: '[% event.title %]', icon: '[% event.type %]', url:
+            [% link3.url({ auth => 'p', module => 'calendar', method => 'view', id => event.id, student_id => s.id, action_id => event.action_id  }) %] },
+        [% END %]
+        ],*!/
+        timeFormat: 'h(:hh)A',
+          /!*  eventRender: function (event, element, view) {
+    
+            var i = document.createElement('i');
+            element.find('div.fc-content').prepend(i);
+            element[0].classList.add(event.icon);
+    
+        },*!/
+        /!*eventClick: function(calEvent, jsEvent, view) {
+            [% IF cfg.DEVEL_MODE %]
+            window.location = url;
+            [% ELSE %]
+            var base64 = Base64.encode(url);
+            window.location = '#/' + base64;
+            [% END %]
+        },*!/
+            header: false,
+            selectHelper: true,
+            editable: true,
+            eventLimit: true,
+            columnHeaderFormat: 'ddd D',
+            height: "auto",
+            weekends: true,
+            firstDay: 'today',
+           // locale: '[% s.language_preference == 'ES' ? 'es' : 'en' %]',
+            displayEventTime: false
+        });
+        }*/
+
+      /* jQuery(function($){
+             var $modal = $('#editor-modal'),
+                 $editor = $('#editor'),
+                 $editorTitle = $('#editor-title'),
+                 ft = FooTable.init('#showcase-example-1', {
+                     columns: $.get("js/json/columns.json"),
+                     rows: $.get("js/json/rows.json"),
+                     editing: {
+                         addRow: function(){
+                             $modal.removeData('row');
+                             $editor[0].reset();
+                             $editorTitle.text('Add a new row');
+                             $modal.modal('show');
+                         },
+                         editRow: function(row){
+                             var values = row.val();
+                             $editor.find('#id').val(values.id);
+                             $editor.find('#firstName').val(values.firstName);
+                             $editor.find('#lastName').val(values.lastName);
+                             $editor.find('#jobTitle').val(values.jobTitle);
+                             $editor.find('#status').val(values.status);
+                             $editor.find('#startedOn').val(values.started.format('YYYY-MM-DD'));
+                             $editor.find('#dob').val(values.dob.format('YYYY-MM-DD'));
+                             $modal.data('row', row);
+                             $editorTitle.text('Edit row #' + values.id);
+                             $modal.modal('show');
+                         },
+                         deleteRow: function(row){
+                             if (confirm('Estas seguro de eliminar esta linea?')){
+                                 row.delete();
+                             }
+                         }
+                     }
+                 }),
+                 uid = 10001;
+    
+             $editor.on('submit', function(e){
+                 if (this.checkValidity && !this.checkValidity()) return;
+                 e.preventDefault();
+                 var row = $modal.data('row'),
+                     values = {
+                         id: $editor.find('#id').val(),
+                         firstName: $editor.find('#firstName').val(),
+                         lastName: $editor.find('#lastName').val(),
+                         jobTitle: $editor.find('#jobTitle').val(),
+                         started: moment($editor.find('#startedOn').val(), 'YYYY-MM-DD'),
+                         dob: moment($editor.find('#dob').val(), 'YYYY-MM-DD'),
+                         status: $editor.find('#status option:selected').val()
+                     };
+    
+                 if (row instanceof FooTable.Row){
+                     row.val(values);
+                 } else {
+                     values.id = uid++;
+                     ft.rows.add(values);
+                 }
+                 $modal.modal('hide');
+             });
+       });*/
+
+      /*la galleria que no sirvio pa ni m*/
+      $(".gallery-js").click(function () {
+        $(".gallery__text--primary").text($(this).data("title"));
+        $(".gallery__text--secondary").text($(this).data("date"));
+        $(".gallery").removeClass("d-none");
+        var gallerySrc = $(this).data("gallery").split("|");
+        var count = 0;
+
+        if (gallerySrc.length > 1) {
+          $(".slide-counter").removeClass("d-none");
+          gallerySrc.forEach(function (element) {
+            count++;
+            var img =
+              "<div class='gallery-slides'><img class='gallery__body--img gallery-img' src='" +
+              element +
+              "'></div>";
+            var dot =
+              '<span class="gallery-dot" onclick="currentSlide(' +
+              count +
+              ')"></span>';
+            $(".gallery__body").append(img);
+            $(".dot-container").append(dot);
+          });
+        } else {
+          $(".gallery__body").html("");
+          var img =
+            "<div class='gallery-slides'><img class='gallery__body--img gallery-img' src='" +
+            gallerySrc[0] +
+            "'></div>";
+          $(".gallery__body").append(img);
+          $(".slide-counter").addClass("d-none");
+        }
+
+        $(".dots-length").text(gallerySrc.length);
+        showSlides(slideIndex);
+      });
+
+      var value = 0;
+      $(".gallery__footer--icon.minus").click(function () {
+        if (value <= 0) {
+          return;
+        }
+        var input = $("#input-range");
+        value -= 25;
+        input.val(value);
+        deepDive(value);
+      });
+      $(".gallery__footer--icon.plus").click(function () {
+        if (value >= 100) {
+          return;
+        }
+        var input = $("#input-range");
+        value += 25;
+        input.val(value);
+
+        deepDive(value);
+      });
+
+      function closeGallery() {
+        $(".gallery").addClass("d-none");
+        $(".gallery__body").html(
+          "<div class='action-item prev' ><i class='fa action-item__icon text-white' onclick='plusSlides(-1)'>&#10094;</i></div><div class='action-item next' ><i class='fa action-item__icon text-white' onclick='plusSlides(1)'>&#10095;</i> </div>",
+        );
+        $(".dot-container").html("");
+      }
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("gallery-slides");
+        var dots = document.getElementsByClassName("gallery-dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" dot-active", "");
+        }
+        document.getElementsByClassName("img-count")[0].textContent =
+          slideIndex;
+
+        // console.log(slides);
+        if (slides.length) {
+          slides[slideIndex - 1].style.display = "block";
+          if (dots.length > 0) {
+            dots[slideIndex - 1].className += " dot-active";
+          }
+        }
+      }
+
+      function deepDive(vol) {
+        var output = document.querySelector("#input-range-bubble");
+        output.innerText = vol + "%";
+        output.style.left = vol + "px";
+
+        var positionOffset = Math.round((12 * vol) / 100) - 6;
+        output.style.left = "calc(" + vol + "% - " + positionOffset + "px)";
+        var zoomer = document.getElementById("input-range");
+        var hubblepic = document.getElementsByClassName("gallery-img");
+
+        [...hubblepic].forEach(function (element) {
+          zoomlevel = 1 + zoomer.valueAsNumber / 100;
+          element.style.webkitTransform = "scale(" + zoomlevel + ")";
+          element.style.transform = "scale(" + zoomlevel + ")";
+        });
+      }
+
+      /*la galleria que no sirvio pa ni m*/
+      /* Birthday falling */
+
+      function getRandomArrayItem(array) {
+        return array[Math.floor(Math.random() * array.length)];
+      }
+
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+
+      function getRandomFloat(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      function getRotation() {
+        return Math.floor(Math.random() * 360) + 1;
+      }
+
+      var particleSettings = {
+        numConfetti: Math.floor(innerWidth / 22),
+        colors: ["blue", "yellow", "red", "green", "purple"],
+        shapes: ["square", "circle", "rectangle", "squiggle"],
+        baseClass: "particle",
+        topOffset: 320,
+        leftOffset: 240,
+        windowHeight: window.innerHeight,
+        windowWidth: window.innerWidth,
+        sizeMin: 6,
+        sizeMax: 10,
+        removeTime: 5000,
+      };
+
+      var birthdayCounter = 0;
+
+      function confetti(settings, counter) {
+        var docFrag = document.createDocumentFragment();
+        var fragDiv = document.createElement("div");
+        fragDiv.classList += "particles particles-" + counter;
+        for (var i = 0; i < settings.numConfetti; i++) {
+          var color = getRandomArrayItem(settings.colors);
+          var shape = getRandomArrayItem(settings.shapes);
+          var size = getRandomInt(settings.sizeMin, settings.sizeMax);
+          if (shape != "squiggle") {
+            var confetti = document.createElement("div");
+            confetti.className +=
+              settings.baseClass +
+              " particle--" +
+              color +
+              " particle--" +
+              shape;
+            confetti.style.top =
+              -settings.topOffset + getRandomInt(0, settings.topOffset) + "px";
+            confetti.style.left = getRandomInt(0, settings.windowWidth) + "px";
+            confetti.style.height = size + "px";
+            confetti.style.width =
+              (shape == "rectangle" ? size * 2 : size) + "px";
+          } else {
+            var confetti = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg",
+            );
+            var path = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path",
+            );
+            confetti.setAttribute(
+              "class",
+              settings.baseClass + " particle--" + shape,
+            );
+            confetti.setAttribute("viewBox", "0 0 50 200");
+            confetti.setAttribute("width", size * 2);
+            confetti.setAttribute("height", size * 2);
+            confetti.style.top =
+              -settings.topOffset + getRandomInt(0, settings.topOffset) + "px";
+            confetti.style.left = getRandomInt(0, settings.windowWidth) + "px";
+            path.setAttribute(
+              "d",
+              "M15,190.27A15,15,0,0,1,2.28,167.33l15-24.12-15-24.11a15,15,0,0,1,0-15.89l15-24.1L2.28,55a15,15,0,0,1,0-15.89l20-32A15,15,0,0,1,47.74,23L32.69,47.06l15.05,24.1a15,15,0,0,1,0,15.89L32.69,111.16l15.05,24.11a15,15,0,0,1,0,15.89l-20,32.05A15,15,0,0,1,15,190.27Z",
+            );
+            path.setAttribute("class", " path--" + color);
+            confetti.appendChild(path);
+          }
+
+          fragDiv.appendChild(confetti);
+        }
+        docFrag.appendChild(fragDiv);
+        document.body.appendChild(docFrag);
+        setTimeout(
+          function () {
+            var c = document.querySelectorAll(
+              ".particles-" + counter + " ." + settings.baseClass,
+            );
+            var remove = ".particles-" + counter;
+            for (var i = 0; i < c.length; ++i) {
+              var newY =
+                settings.windowHeight + getRandomInt(settings.windowHeight, 0);
+              var newX =
+                parseInt(c[i].style.left, 10) +
+                getRandomInt(-settings.leftOffset, settings.leftOffset);
+              c[i].style.top = newY + "px";
+              c[i].style.left = newX + "px";
+              c[i].style.transform = "rotateZ(" + getRotation() + "deg)";
+            }
+            removeConfetti(settings.removeTime, remove);
+          },
+          50,
+          counter,
+        );
+      }
+
+      function removeConfetti(miliseconds, removeSelector) {
+        setTimeout(
+          function () {
+            document.querySelector(removeSelector).remove();
+          },
+          miliseconds,
+          removeSelector,
+        );
+      }
+
+      /* Birthday animation js */
+      var confettiSettings = {
+        numConfetti: 15,
+        distance: 48,
+        colors: ["blue", "yellow", "red", "green", "purple"],
+        shapes: ["square", "circle", "rectangle"],
+      };
+
+      function emit() {
+        console.log("confetti");
+        //var elem = $(".confetti");
+        // elem.remove();
+        document
+          .querySelectorAll(".confetti")
+          .forEach((e) => e.parentNode.removeChild(e));
+
+        var container = document.getElementById("confetti-container");
+        var containerRect = container.getBoundingClientRect();
+        containerRect = container;
+        var containerData = {
+          height: containerRect.offsetHeight,
+          width: containerRect.offsetWidth,
+        };
+        var start = {
+          x: containerData.width / 2,
+          y: containerData.height / 2,
+        };
+
+        var maxY = start.y - confettiSettings.distance;
+        var minY = start.y + confettiSettings.distance;
+
+        var maxX = start.x - confettiSettings.distance;
+        var minX = start.x + confettiSettings.distance;
+
+        var docFrag = document.createDocumentFragment();
+        var particles = [];
+        for (var i = 0; i < confettiSettings.numConfetti; i++) {
+          let confetti = document.createElement("div");
+          let color = getRandomArrayItem(confettiSettings.colors);
+          let shape = getRandomArrayItem(confettiSettings.shapes);
+          let size = getRandomInt(8, 4);
+
+          confetti.className += "confetti " + color + " " + shape;
+          confetti.style.top = start.y + "px";
+          confetti.style.left = start.x + "px";
+          confetti.style.height = size + "px";
+          confetti.style.width = size + "px";
+          //confetti.style.transform = "rotate(" + getRotation() + "deg)";
+          confetti.style.transition =
+            "all " + getRandomFloat(1.5, 0.5) + "s ease";
+          docFrag.appendChild(confetti);
+
+          /*setTimeout(function() {
+                    console.log(i);
+                  confetti.style.transition = "all " + getRandomFloat(1.5, 0.5) + "s ease";
+                  confetti.style.top = newY + "px";
+                  confetti.style.left = newX + "px";
+                  confetti.style.transform = "rotate(" + getRotation() + "deg)";
+    
+                      confetti.addEventListener("transitionend", function() {
+                        confetti.style.transition = "all " + getRandomFloat(1.25, 1) + " ease";
+                        confetti.style.opacity = 0;
+                        confetti.style.transform = "rotate(" + getRotation() + "deg)";
+                        confetti.style.top = parseInt(confetti.style.top) + 10 + "px";
+                        setTimeout(function() {
+                          //confetti.remove();
+                          //confetti = null;
+    
+                      }, 2000);
+                      });
+                }, 1);
+                */
+        }
+        //document.body.appendChild(docFrag);
+        container.appendChild(docFrag);
+        setTimeout(function () {
+          var c = document.querySelectorAll(".confetti");
+          for (var i = 0; i < c.length; ++i) {
+            let newX = getRandomInt(minX, maxX);
+            let newY = getRandomInt(minY, maxY);
+            c[i].style.top = newY + "px";
+            c[i].style.left = newX + "px";
+            c[i].style.transform = "rotateZ(" + getRotation() + "deg)";
+          }
+        }, 50);
+      }
+
+      var cFormatter = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+
+      function currency_format(value) {
+        return cFormatter.format(value);
+      }
+
+      // Mostly for footable, keep text on columns but sort by numeric value of data-sort-value
+      function keepText(valueOrElement) {
+        valueOrElement = $(valueOrElement).text();
+        return valueOrElement;
+      }
+      function useFloatSort(valueOrElement) {
+        var data = $(valueOrElement).data("sortValue");
+        valueOrElement = data ? data : parseFloat($(valueOrElement).text());
+        return parseFloat(valueOrElement);
+      }
+
+      // For testing page
+      function handleSurfaceMode(value) {
+        const body = document.body;
+        const surfaceClasses = Array.from(body.classList).filter((c) =>
+          c.startsWith("surface"),
+        );
+        surfaceClasses.forEach((c) => body.classList.remove(c));
+        if (value === "no-shadow") {
+          body.classList.add("surface--no-shadow");
+        }
+        if (value === "small-border") {
+          body.classList.add("surface--small-border");
+        }
+        if (value === "big-border") {
+          body.classList.add("surface--big-border");
+        }
+      }
+
+      function handleBackgroundMode(value) {
+        const body = document.body;
+        const backgroundClasses = Array.from(body.classList).filter((c) =>
+          c.startsWith("background"),
+        );
+        backgroundClasses.forEach((c) => body.classList.remove(c));
+        if (value === "gray") {
+          body.classList.add("background--gray");
+        }
+        if (value === "white") {
+          body.classList.add("background--white");
+        }
+        if (value === "soft-blue") {
+          body.classList.add("background--soft-blue");
+        }
+        if (value === "blue-98") {
+          body.classList.add("background--blue-98");
+        }
+        if (value === "teal-98") {
+          body.classList.add("background--teal-98");
+        }
+        if (value === "teal-95") {
+          body.classList.add("background--teal-95");
+        }
+        if (value === "gradient-apple-white-blue") {
+          body.classList.add("background--gradient-apple-white-blue");
+        }
+        if (value === "gradient-teal-white-blue") {
+          body.classList.add("background--gradient-teal-white-blue");
+        }
+        if (value === "gradient-apple-blue") {
+          body.classList.add("background--gradient-apple-blue");
+        }
+        if (value === "gradient-teal-blue") {
+          body.classList.add("background--gradient-teal-blue");
+        }
+      }
+
+      function handleMenuMode(value) {
+        const body = document.body;
+        const menuClasses = Array.from(body.classList).filter((c) =>
+          c.startsWith("menu"),
+        );
+        menuClasses.forEach((c) => body.classList.remove(c));
+        if (value === "white") {
+          body.classList.add("menu--white");
+        }
+      }
+
+      function handleTopBarMode(value) {
+        const body = document.body;
+        const topBarClasses = Array.from(body.classList).filter((c) =>
+          c.startsWith("top-bar"),
+        );
+        topBarClasses.forEach((c) => body.classList.remove(c));
+        if (value === "border") {
+          body.classList.add("top-bar--border");
+        }
+      }
+
+      function copyOptions() {
+        var selects = document.querySelectorAll("#testing-page select");
+        var values = Array.from(selects).map(function (s) {
+          return s.value;
+        });
+        console.log(values);
+        navigator.clipboard.writeText(values.join(","));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Buttons</title>
+</head>
+<body>
+
+    <h5>Button Radius With Icon</h5>
+    <div class="py-4">
+        <button type="button" class="btn btn--dark btn--radius"><i class="fas fa-plus"></i><span class="btn--icon-space">Dark</span></button>
+        <button type="button" class="btn btn--dark btn--radius"><i class="fas fa-plus"></i><span class="btn--icon-space">Dark Dark Darks</span></button>
+
+        <button type="button" class="btn btn--radius btn--dark btn-sm"><i class="fas fa-plus"></i><span class="btn--icon-space">Dark Small</span></button>
+        <button type="button" class="btn btn--radius btn--dark"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <h5>Button Base</h5>
+    <div class="py-4">
+      <button type="button" class="btn btn--blue">Blue</button>
+      <button type="button" class="btn btn--green">Green</button>
+      <button type="button" class="btn btn--purple">Purple</button>
+      <button type="button" class="btn btn--teal">Teal</button>
+      <button type="button" class="btn btn--orange">Orange</button>
+      <button type="button" class="btn btn--yellow">Yellow</button>
+      <button type="button" class="btn btn--red">Red</button>
+
+      <button type="button" class="btn btn--dark">Dark</button>
+      <button type="button" class="btn btn--light">Ligth</button>
+    </div>
+
+    <h5>Outline Buttons</h5>
+    <div class="py-4">
+      <button type="button" class="btn btn--outline--blue">Blue</button>
+      <button type="button" class="btn btn--outline--green">Green</button>
+      <button type="button" class="btn btn--outline--purple">Purple</button>
+      <button type="button" class="btn btn--outline--teal">Teal</button>
+      <button type="button" class="btn btn--outline--orange">Orange</button>
+      <button type="button" class="btn btn--outline--yellow">Yellow</button>
+      <button type="button" class="btn btn--outline--red">Red</button>
+      <button type="button" class="btn btn--outline--dark">Dark</button>
+      <button type="button" class="btn btn--outline--light">Ligth</button>
+    </div>
+
+    <h5>Desabled Buttons </h5>
+    <div class="py-4">
+        <button type="button" class="btn btn--dark" disabled>Deseable</button>
+        <button type="button" class="btn btn--dark btn--radius" disabled><i class="fas fa-plus"></i><span class="btn--icon-space">Dark</span></button>
+        <button type="button" class="btn btn--radius btn--dark btn-sm" disabled><i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn--radius btn--dark" disabled><i class="fas fa-plus"></i></button>
+    </div>
+
+    <h5>Button Group</h5>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn--condensed btn--outline--blue"><i class="fas fa-align-left"></i></button>
+        <button type="button" class="btn btn--condensed btn--outline--blue"><i class="fas fa-align-center"></i></button>
+        <button type="button" class="btn btn--condensed btn--outline--blue"><i class="fas fa-align-right"></i></button>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn--clear-blue" style="box-shadow: none;">
+            <a href="javascript:void(0);" data-action="DELETE" class="ACTION-BUTTONS text-dark-gray" data-toggle="tooltip" data-placement="top" data-original-title="[% lang.t('eliminate') %]">
+                <i class="far fa-trash-can"></i>
+                <span class="sr-only">[% lang.t('eliminate') %]</span>
+            </a>
+        </button>
+        <button type="button" class="btn btn--clear-blue" style="box-shadow: none;">
+            <a href="javascript:void(0);" data-action="MARKASREAD" class="ACTION-BUTTONS text-dark-gray" data-toggle="tooltip" data-placement="top" data-original-title="[% lang.t('mark_as_read') %]">
+                <i class="fas fa-envelope-open"></i>
+                <span class="sr-only">[% lang.t('mark_as_read') %]</span>
+            </a>
+        </button>
+        <button type="button" class="btn btn--clear-blue" style="box-shadow: none;">
+            <a href="javascript:void(0);" data-action="MARKASNEW" class="ACTION-BUTTONS text-dark-gray" data-toggle="tooltip" data-placement="top" data-original-title="[% lang.t('mark_as_new') %]">
+                <i class="fas fa-envelope"></i>
+                <span class="sr-only">[% lang.t('mark_as_new') %]</span>
+            </a>
+        </button>
+    </div>
+
+    <div class="py-4">
+      <button type="button" class="btn btn-text--blue">Blue</button>
+      <button type="button" class="btn btn-text--green">Green</button>
+      <button type="button" class="btn btn-text--purple">Purple</button>
+      <button type="button" class="btn btn-text--teal">Teal</button>
+      <button type="button" class="btn btn-text--orange">Orange</button>
+      <button type="button" class="btn btn-text--yellow">Yellow</button>
+      <button type="button" class="btn btn-text--red">Red</button>
+      <button type="button" class="btn btn-text--dark">Dark</button>
+      <button type="button" class="btn btn-text--light">Ligth</button>
+    </div>
+
+    <div class="action-item">
+      <i class="fa fa-download action-item__icon"></i>
+    </div>
+    <h5>Fab Total Radius</h5>
+    <div class="py-4">
+        <button type="button" class="btn btn--dark btn--total-radius"><i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn--green btn--total-radius btn--fixed"><i class="fas fa-heart"></i></button>
+        <button type="button" class="btn btn--green btn--total-radius-sm"><i class="fas fa-plus"></i></button>
+    </div>
+    <h5>Fab Shaped</h5>
+    <div class="py-4">
+        <button type="button" class="btn btn--blue btn--shaped"><i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn--blue btn--shaped-square"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <h5>btn--md y btn-md</h5>
+    <div class="">
+        <div class="btn__serie">
+            <button type="button" class="btn btn--green btn-md"><i class="fas fa-plus"></i></button>
+            <button type="button" class="btn btn--blue btn--md"><i class="fas fa-check"></i></button>
+            <button type="button" class="btn btn--red btn--md"><i class="far fa-trash-can"></i></button>
+            <button type="button" class="btn btn-text--red btn--md"><i class="far fa-trash-can mr-1"></i>Borrar</button>
+            <button type="button" class="btn btn--outline--green btn-md"><i class="fas fa-plus"></i></button>
+            <button type="button" class="btn btn--outline--blue btn--md"><i class="fas fa-check"></i></button>
+            <button type="button" class="btn btn--outline--red btn--md"><i class="far fa-trash-can"></i></button>
+            <button type="button" class="btn btn--outline--dark btn--md">
+                <span class="icon__stack w--2">
+                    <i class="fas fa-scale-balanced"></i>
+                    <i class="icon__subicon icon__subicon--bottom-right fas fa-file-invoice-dollar text-yellow"></i>
+                </span>
+            </button>
+
+
+        </div>
+    </div>
+</body>
+</html>

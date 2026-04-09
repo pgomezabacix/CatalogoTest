@@ -1,0 +1,524 @@
+
+
+
+
+
+<div class="row justify-content-center">
+    <div class="col-xl-4 col-lg-6">
+        <div class="panel mb-grid-gutter scale-entrance">
+            <div class="panel__body">
+                <div class="alert alert--clear-blue text-dark"><i class="fas fa-circle-info alert__icon"></i> Si son listas, usar separador de lista.<br> Usar listas cuando el contexto tenga sentido o la UI se acople mejor.</div>
+                <ul class="material-list material-list--sm material-list--borderless mb-3">
+                    <li class="material-list__item material-list__item--subheader">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary material-list__text--complete">Opciones</span>
+                        </span>
+                    </li>
+                    <label class="material-list__item material-list__item--auto-height">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">Permiso para crear reportes / Seguimientos</span>
+                        </span>
+                        <div class="material-list__meta">
+                            <label class="material-check">
+                                <input type="checkbox" class="hidden" name="can_add_reports" id="can_add_reports">
+                                <span class="material-check__switch material-check__switch--green">
+                                    <span class="material-check__container-dot">
+                                        <span class="material-check__dot"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </label>
+
+                    <label class="material-list__item material-list__item--auto-height">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">Permiso para ver anotaciones</span>
+                        </span>
+                        <div class="material-list__meta">
+                            <label class="material-check">
+                                <input type="checkbox" class="hidden" name="can_view_annotations" id="can_view_annotations">
+                                <span class="material-check__switch material-check__switch--green">
+                                    <span class="material-check__container-dot">
+                                        <span class="material-check__dot"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </label>
+                    <label class="material-list__item material-list__item--auto-height">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">Permiso para crear anotaciones</span>
+                        </span>
+                        <div class="material-list__meta">
+                            <label class="material-check">
+                                <input type="checkbox" class="hidden" name="can_add_annotations" id="can_add_annotations">
+                                <span class="material-check__switch material-check__switch--green">
+                                    <span class="material-check__container-dot">
+                                        <span class="material-check__dot"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </label>
+                    <label class="material-list__item material-list__item--auto-height">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">Permiso para entrega de estudiantes</span>
+                        </span>
+                        <div class="material-list__meta">
+                            <label class="material-check">
+                                <input type="checkbox" class="hidden" name="has_syt_exit_permission" id="has_syt_exit_permission">
+                                <span class="material-check__switch material-check__switch--green">
+                                    <span class="material-check__container-dot">
+                                        <span class="material-check__dot"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </label>
+                    <label class="material-list__item material-list__item--auto-height">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">Usa checador</span>
+                        </span>
+                        <div class="material-list__meta">
+                            <label class="material-check">
+                                <input type="checkbox" class="hidden" name="use_timeclock" id="cb_use_timeclock">
+                                <span class="material-check__switch material-check__switch--green">
+                                    <span class="material-check__container-dot">
+                                        <span class="material-check__dot"></span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </label>
+                </ul>
+
+                <ul class="material-list material-list--sm material-list--borderless mb-3">
+                    <li class="material-list__item material-list__item--subheader">
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">
+                                Campus
+                            </span>
+                        </span>
+                    </li>
+                    <li class="material-list__item cursor-pointer" data-toggle="collapse" data-target="#campus1" aria-expanded="true" aria-controls="campus1">
+                        <div class="d-none d-md-flex">
+                            <i class="fas fa-building-columns material-list__icon text-dark-gray"></i>
+                        </div>
+                        <span class="material-list__text">
+                            <span class="material-list__text--primary">
+                                Campus CDMX
+                            </span>
+                        </span>
+                        <div class="material-list__meta">
+                            <i class="fas action-item__icon action-item__icon--collapse"></i>
+                        </div>
+                    </li>
+
+                    <div class="collapse show" id="campus1" style="">
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class="fas fa-school  material-list__icon text-dark-gray"></i>
+                            </div>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    Primaria
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    01 - PRIMERO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    02 - SEGUNDO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    03 - TERCERO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    04 - CUARTO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    05 - QUINTO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    06 - SEXTO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                    </div>
+
+
+                    <div class="collapse show" id="campus1" style="">
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class="fas fa-school  material-list__icon text-dark-gray"></i>
+                            </div>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    Secundaria
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    01 - PRIMERO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    02 - SEGUNDO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                        <label class="material-list__item cursor-pointer">
+                            <div class="d-none d-md-flex">
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                                <i class=" material-list__icon material-list__icon--child"></i>
+                            </div>
+                            <i class="far fa-building material-list__icon text-dark-gray"></i>
+                            <span class="material-list__text">
+                                <span class="material-list__text--primary">
+                                    03 - TERCERO
+                                </span>
+                            </span>
+                            <div class="material-list__meta">
+                                <div class="material-check">
+                                    <input type="checkbox" class="hidden" checked="">
+                                    <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span>
+                                </div>
+                            </div>
+                        </label>
+
+                    </div>
+
+                </ul>
+
+                <div class="alert alert--clear-blue text-dark"><i class="fas fa-circle-info alert__icon"></i> Si son elementos normales o interfaces sencillas, usar overlines.</div>
+                <div class="grouper">
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="switch" dir="auto" required="">
+                        <span class="material-check__switch">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">Recurrente</span>
+                    </label>
+
+                    <div class="overline">Tipo</div>
+                    <label class="material-check d-none">
+                        <input type="radio" class="hidden" name="type" value="GENERAL">
+                        <i class=" material-check__radio"></i> <span class="text-radio">General</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="radio" class="hidden" name="type" value="EVALUATION">
+                        <i class=" material-check__radio"></i> <span class="text-radio">Evaluación de profesores</span>
+                    </label>
+                    <label class="material-check d-none2">
+                        <input type="radio" class="hidden" name="type" value="EVALUATION">
+                        <i class=" material-check__radio"></i> <span class="text-radio">Informe de estudiante</span>
+                    </label>
+
+                    <div class="overline mt-3">Opciones</div>
+                    <label class="material-check" id="GROUP_BY_TEACHER" style="">
+                        <input type="checkbox" class="hidden" name="group_by_teacher">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox"></i></span><span class="text-checkbox">Agrupar profesores por pregunta</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-6">
+        <div class="panel mb-grid-gutter scale-entrance">
+            <div class="panel__body">
+
+                <div class="grouper">
+                    <div class="overline">Switch</div>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="" dir="auto"  required="">
+                        <span class="material-check__switch">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">hay de todos los colores</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="" dir="auto"  required="" checked>
+                        <span class="material-check__switch material-check__switch--green">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">verde</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="" dir="auto"  required="" checked>
+                        <span class="material-check__switch material-check__switch--red">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">rojo</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="" dir="auto"  required="" checked>
+                        <span class="material-check__switch material-check__switch--yellow">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">amarillo</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" placeholder="" name="" id="" dir="auto"  required="" checked>
+                        <span class="material-check__switch material-check__switch--purple">
+                            <span class="material-check__container-dot">
+                                <span class="material-check__dot"></span>
+                            </span>
+                        </span>
+                        <span class="text-checkbox">morado</span>
+                    </label>
+                </div>
+                <div class="grouper">
+                    <div class="overline">checkbox</div>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="">
+                        <span class="material-check__checkbox-container">
+                            <i class="material-check__checkbox"></i>
+                        </span>
+                        <span class="text-checkbox">unckecked</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked>
+                        <span class="material-check__checkbox-container ">
+                            <i class="material-check__checkbox"></i>
+                        </span>
+                        <span class="text-checkbox">normal</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox"  class="hidden" name="" disabled>
+                        <span class="material-check__checkbox-container">
+                            <i class=" material-check__checkbox"></i>
+                        </span>
+                        <span class="text-checkbox">disabled</span>
+                    </label>
+
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked="checked">
+                        <span class="material-check__checkbox-container">
+                            <i class=" material-check__checkbox"></i>
+                        </span>
+                        <span class="text-checkbox">checked</span>
+                    </label>
+
+
+                    <label class="material-check">
+                        <input type="checkbox"  class="hidden" name="" checked="checked" disabled>
+                        <span class="material-check__checkbox-container">
+                            <i class=" material-check__checkbox"></i>
+                        </span>
+                        <span class="text-checkbox">disabled checked</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked>
+                        <span class="material-check__checkbox-container material-check__checkbox-container--red">
+                            <i class="material-check__checkbox material-check__checkbox--red"></i>
+                        </span>
+                        <span class="text-checkbox">rojo</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked>
+                        <span class="material-check__checkbox-container material-check__checkbox-container--yellow">
+                            <i class="material-check__checkbox material-check__checkbox--yellow"></i>
+                        </span>
+                        <span class="text-checkbox">amarillo</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked>
+                        <span class="material-check__checkbox-container material-check__checkbox-container--green">
+                            <i class="material-check__checkbox material-check__checkbox--green"></i>
+                        </span>
+                        <span class="text-checkbox">green</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="checkbox" class="hidden" name="" checked>
+                        <span class="material-check__checkbox-container material-check__checkbox-container--purple">
+                            <i class="material-check__checkbox material-check__checkbox--purple"></i>
+                        </span>
+                        <span class="text-checkbox">green</span>
+                    </label>
+                    <div class="overline">fancy</div>
+                    <label class="material-check ">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox material-check__checkbox--enabled"></i></span>
+                        <span class="text-checkbox">fancy checkbox</span>
+                    </label>
+                    <label class="material-check ">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox material-check__checkbox--disabled"></i></span>
+                        <span class="text-checkbox">fancy checkbox</span>
+                    </label>
+
+                    <label class="material-check ">
+                        <span class="material-check__checkbox-container"><i class="material-check__checkbox material-check__checkbox--selected"></i></span>
+                        <span class="text-checkbox">fancy checkbox</span>
+                    </label>
+
+
+                </div>
+                <div class="grouper">
+                    <div class="overline">radio</div>
+                    <label class="material-check">
+                        <input type="radio" class="hidden" name="test1" checked="">
+                        <i class=" material-check__radio"></i>
+                        <span class="text-radio">radio</span>
+                    </label>
+                    <label class="material-check">
+                        <input type="radio" class="hidden" name="test1" checked="">
+                        <i class=" material-check__radio"></i>
+                        <span class="text-radio">radio 2</span>
+                    </label>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

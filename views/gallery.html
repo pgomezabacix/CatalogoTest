@@ -1,0 +1,88 @@
+<div class="material-card">
+    <div class="material-card__header">
+          <span class="material-card__header--icon">
+            <i class="fas fa-circle-user"></i>
+          </span>
+        <span class="material-card__text">
+            <span class="material-card__text--primary">
+                Lorem ipsum, Pariatur laborum.
+            </span>
+            <span class="material-card__text--secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Sequi ut numquam voluptatem esse suscipit autem, vel accusamus tore.</span>
+          </span>
+        <div class="action-item collapsed material-card__header--collapse  material-card__header--icon" data-toggle="collapse" data-target="#options" aria-expanded="false" aria-controls="table1">
+            <i class="fas action-item__icon action-item__icon--collapse action-item__icon--sm"></i>
+        </div>
+    </div>
+    <div class="material-card__body--graphic">
+        <img class="" src="https://placeimg.com/640/200/any" alt="pic">
+    </div>
+    <div class="material-card__body">
+        <div class="material-card__body--paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+            aperiam fuga debitis totam explicabo dolore natus voluptatum eveniet voluptates facilis impedit, facere
+            itaque deleniti repudiandae, repellendus nulla sint ratione neque?</div>
+    </div>
+
+    <div class="material-card__footer action-bar">
+        <div class="action-bar__buttons-section d-sm-block d-none">
+            <button type="button" class="btn btn-text--blue">Guardar</button>
+            <button type="button" class="btn btn-text--green">Imprimir</button>
+        </div>
+        <div class="action-bar__icons-section">
+            <div class="action-item">
+                <i class="fa fa-print action-item__icon action-item__icon--sm"></i>
+            </div>
+            <div class="action-item ">
+                <i class="fas fa-angle-left action-item__icon action-item__icon--sm"></i>
+            </div>
+            <div class="d-block d-sm-none">
+                <a class="nav-link dropdown-toggle action-item action-bar__icons-section--more" href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="gallery__header">
+        <span class="gallery__text">
+            <span class="gallery__text--primary">
+                titulo de la foto
+            </span>
+            <span class="gallery__text--secondary">
+                subtitulo de la foto
+            </span>
+        </span>
+        <div class="gallery__header--close" onclick="closeGallery()">
+            <i class="fas fa-xmark ml-auto text-white"></i>
+        </div>
+    </div>
+    <div class="gallery__body">
+        <div class="gallery-slides">
+            <img class="gallery__body--img gallery-img" src="https://placeimg.com/640/200/any">
+        </div>
+        <div class="gallery-slides">
+            <img class="gallery__body--img gallery-img" src="https://placeimg.com/500/200/any">
+        </div>
+        <div class="gallery-slides">
+            <img class="gallery__body--img gallery-img" src="https://placeimg.com/500/500/any">
+        </div>
+        <a class="gallery--prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="gallery--next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="dot-container">
+        <span class="gallery-dot" onclick="currentSlide(1)"></span> 
+        <span class="gallery-dot" onclick="currentSlide(2)"></span> 
+        <span class="gallery-dot" onclick="currentSlide(3)"></span> 
+    </div>
+    <div class="gallery__footer">
+        <div>
+            <input type="range" min="1" max="100" value="0" class="slider" oninput="deepDive()" id="input-range">
+        </div>
+        <div class="text-center">
+            <span class="gallery__text--secondary">
+                1 / 12
+            </span>
+        </div>
+    </div>
+</div>
+
