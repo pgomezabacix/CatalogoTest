@@ -245,8 +245,8 @@
         </div>
       </nav>
 
-      <div class="navbar-tabs dashboard-padding">
-        <ul class="nav nav--scrollable w-100">
+      <div class="navbar-tabs dashboard-padding d-flex justify-content-between">
+        <ul class="nav nav--scrollable">
           <li>
             <a class="nav--tab active" href="#">Recibidos</a>
           </li>
@@ -339,6 +339,112 @@
             </div>
           </li>
         </ul>
+        <div class="text-right">
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="surface-mode"
+                onchange="handleSurfaceMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="no-shadow">no shadow</option>
+                <option value="small-border">small border</option>
+                <option value="big-border">big border</option>
+                <option value="soft-shadow">soft shadow</option>
+              </select>
+              <label for="surface-mode">Surface </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="surface-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--12 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="background-mode"
+                onchange="handleBackgroundMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="gray">gray</option>
+                <option value="white">white</option>
+                <option value="soft-blue">soft blue</option>
+                <option value="blue-98">blue 98</option>
+                <option value="teal-98">teal 98</option>
+                <option value="teal-95">teal 95</option>
+                <option value="gradient-apple-white-blue">
+                  gradient apple white blue
+                </option>
+                <option value="gradient-teal-white-blue">
+                  gradient teal white blue
+                </option>
+                <option value="gradient-apple-blue">gradient apple blue</option>
+                <option value="gradient-teal-blue">gradient teal blue</option>
+              </select>
+              <label for="background-mode">Background </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="background-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select id="menu-mode" onchange="handleMenuMode(this.value)">
+                <option value="default">default</option>
+                <option value="white">white</option>
+              </select>
+              <label for="menu-mode">Menu </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="menu-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="top -bar-mode"
+                onchange="handleTopBarMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="border">border</option>
+              </select>
+              <label for="top-bar-mode">Top Bar </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="top-bar-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <button
+            class="action-item d-inline-block"
+            id="copy-options"
+            data-toggle="tooltip"
+            title=""
+            data-original-title="Copiar"
+            data-placement="top"
+            onclick="copyOptions()"
+          >
+            <i class="far fa-copy text-dark action-item__icon"></i>
+          </button>
+        </div>
       </div>
     </div>
 

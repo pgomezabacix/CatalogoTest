@@ -8,109 +8,9 @@
 
   <body>
     <div id="testing-page" class="container">
-      <div class="mb-5 text-center">
-        <div class="material-form material-form--sm w--12 d-inline-block">
-          <div class="material-form__container">
-            <select id="surface-mode" onchange="handleSurfaceMode(this.value)">
-              <option value="default">default</option>
-              <option value="no-shadow">no shadow</option>
-              <option value="small-border">small border</option>
-              <option value="big-border">big border</option>
-              <option value="soft-shadow">soft shadow</option>
-            </select>
-            <label for="surface-mode">Surface </label>
-            <div class="material-form__icon-right">
-              <i class="fas fa-sort-down"></i>
-            </div>
-            <div
-              class="material-form__helper-text text-red"
-              id="surface-mode_error"
-            ></div>
-          </div>
-        </div>
-
-        <div class="material-form material-form--sm w--12 d-inline-block">
-          <div class="material-form__container">
-            <select
-              id="background-mode"
-              onchange="handleBackgroundMode(this.value)"
-            >
-              <option value="default">default</option>
-              <option value="gray">gray</option>
-              <option value="white">white</option>
-              <option value="soft-blue">soft blue</option>
-              <option value="blue-98">blue 98</option>
-              <option value="teal-98">teal 98</option>
-              <option value="teal-95">teal 95</option>
-              <option value="gradient-apple-white-blue">
-                gradient apple white blue
-              </option>
-              <option value="gradient-teal-white-blue">
-                gradient teal white blue
-              </option>
-              <option value="gradient-apple-blue">gradient apple blue</option>
-              <option value="gradient-teal-blue">gradient teal blue</option>
-            </select>
-            <label for="background-mode">Background </label>
-            <div class="material-form__icon-right">
-              <i class="fas fa-sort-down"></i>
-            </div>
-            <div
-              class="material-form__helper-text text-red"
-              id="background-mode_error"
-            ></div>
-          </div>
-        </div>
-
-        <div class="material-form material-form--sm w--12 d-inline-block">
-          <div class="material-form__container">
-            <select id="menu-mode" onchange="handleMenuMode(this.value)">
-              <option value="default">default</option>
-              <option value="white">white</option>
-            </select>
-            <label for="menu-mode">Menu </label>
-            <div class="material-form__icon-right">
-              <i class="fas fa-sort-down"></i>
-            </div>
-            <div
-              class="material-form__helper-text text-red"
-              id="menu-mode_error"
-            ></div>
-          </div>
-        </div>
-
-        <div class="material-form material-form--sm w--12 d-inline-block">
-          <div class="material-form__container">
-            <select id="top -bar-mode" onchange="handleTopBarMode(this.value)">
-              <option value="default">default</option>
-              <option value="border">border</option>
-            </select>
-            <label for="top-bar-mode">Top Bar </label>
-            <div class="material-form__icon-right">
-              <i class="fas fa-sort-down"></i>
-            </div>
-            <div
-              class="material-form__helper-text text-red"
-              id="top-bar-mode_error"
-            ></div>
-          </div>
-        </div>
-
-        <button
-          class="action-item d-inline-block"
-          id="copy-options"
-          data-toggle="tooltip"
-          title=""
-          data-original-title="Copiar"
-          data-placement="top"
-          onclick="copyOptions()"
-        >
-          <i class="far fa-copy text-dark action-item__icon"></i>
-        </button>
-      </div>
       <div class="row justify-content-center">
         <div class="col-lg-6 col-xxl-5">
-          <div class="panel mb-grid-gutter scale-entrance">
+          <div class="panel mb-grid-gutter scale-entrance position-relative">
             <div class="panel__header action-bar">
               <span class="panel__text">
                 <span class="panel__text--primary panel__text--complete"
@@ -134,7 +34,7 @@
                   width: 4px;
                   height: 32px;
                   position: absolute;
-                  left: 50px;
+                  left: 34px;
                   top: 106px;
                 "
               ></div>
@@ -144,7 +44,7 @@
                   width: 4px;
                   height: 32px;
                   position: absolute;
-                  left: 50px;
+                  left: 34px;
                   top: 181px;
                 "
               ></div>
@@ -227,6 +127,7 @@
                       data-period_order=""
                       charge_id=""
                       data-charge_id=""
+                      checked
                     />
                     <span class="material-check__checkbox-container"
                       ><i class="material-check__checkbox"></i
@@ -240,6 +141,170 @@
                   >
                   <span class="material-list__text--secondary">
                     <div class="badge badge-yellow"><span>Vence hoy</span></div>
+                  </span>
+                </span>
+                <span class="tuition__balance">
+                  <b class="text-dark">$1,000.00</b>
+                </span>
+                <span
+                  class="material-list__meta--center material-list__text--sm collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapsible-1-period-9-charge-1"
+                  aria-expanded="false"
+                  aria-controls="#collapsible-1-period-9-charge-1"
+                >
+                  <div
+                    class="action-item material-card__header--collapse material-card__header--icon"
+                  >
+                    <i
+                      class="fas action-item__icon action-item__icon--collapse action-item__icon--sm"
+                    ></i>
+                  </div>
+                </span>
+              </li>
+            </div>
+          </div>
+          <div class="panel mb-grid-gutter scale-entrance position-relative">
+            <div class="panel__header action-bar">
+              <span class="panel__text">
+                <span class="panel__text--primary panel__text--complete"
+                  >Pablo Gómez</span
+                >
+                <span class="panel__text--secondary panel__text--complete"
+                  >3 conceptos</span
+                ></span
+              >
+              <span class="panel__text m-0 ml-auto pr-1">
+                <span class="panel__text--primary panel__text--complete"
+                  >$3,000.00</span
+                >
+              </span>
+            </div>
+            <div class="divider"></div>
+            <div class="panel__body2 pb-0">
+              <div
+                style="
+                  background: var(--color-blue-container);
+                  width: 4px;
+                  height: 32px;
+                  position: absolute;
+                  left: 34px;
+                  top: 106px;
+                "
+              ></div>
+              <div
+                style="
+                  background: var(--color-blue-container);
+                  width: 4px;
+                  height: 32px;
+                  position: absolute;
+                  left: 34px;
+                  top: 181px;
+                "
+              ></div>
+              <li
+                class="material-list__item material-list__item--auto-height py-3"
+              >
+                <i class="fas fa-lock material-list__icon text-blue mr-2"></i>
+                <span class="material-list__text fg-1">
+                  <span
+                    class="material-list__text--primary material-list__text--complete"
+                    >Colegiatura Enero 2026</span
+                  >
+                  <span class="material-list__text--secondary">
+                    <div class="badge badge-red material-chip--soft-red">
+                      <span>Vencido</span>
+                    </div>
+                  </span>
+                </span>
+                <span class="tuition__balance">
+                  <b class="text-red">$1,000.00</b>
+                </span>
+                <span
+                  class="material-list__meta--center material-list__text--sm collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapsible-1-period-9-charge-1"
+                  aria-expanded="false"
+                  aria-controls="#collapsible-1-period-9-charge-1"
+                >
+                  <div
+                    class="action-item material-card__header--collapse material-card__header--icon"
+                  >
+                    <i
+                      class="fas action-item__icon action-item__icon--collapse action-item__icon--sm"
+                    ></i>
+                  </div>
+                </span>
+              </li>
+              <li
+                class="material-list__item material-list__item--auto-height py-3"
+              >
+                <i class="fas fa-lock material-list__icon text-blue mr-2"></i>
+                <span class="material-list__text fg-1">
+                  <span
+                    class="material-list__text--primary material-list__text--complete"
+                    >Colegiatura Febrero 2026</span
+                  >
+                  <span class="material-list__text--secondary">
+                    <div
+                      class="badge badge-red badge badge-red material-chip--soft-red"
+                    >
+                      <span>Vencido</span>
+                    </div>
+                  </span>
+                </span>
+                <span class="tuition__balance">
+                  <b class="text-red">$1,000.00</b>
+                </span>
+                <span
+                  class="material-list__meta--center material-list__text--sm collapsed"
+                  data-toggle="collapse"
+                  data-target="#collapsible-1-period-9-charge-1"
+                  aria-expanded="false"
+                  aria-controls="#collapsible-1-period-9-charge-1"
+                >
+                  <div
+                    class="action-item material-card__header--collapse material-card__header--icon"
+                  >
+                    <i
+                      class="fas action-item__icon action-item__icon--collapse action-item__icon--sm"
+                    ></i>
+                  </div>
+                </span>
+              </li>
+              <li
+                class="material-list__item material-list__item--auto-height py-3"
+              >
+                <label class="material-list__icon mr-2 mb-0">
+                  <div class="material-check">
+                    <input
+                      type="checkbox"
+                      class="hidden charge-js _t_1"
+                      name=""
+                      data-period_id=""
+                      data-period_name=""
+                      amount="1000.00"
+                      data-period_order=""
+                      charge_id=""
+                      data-charge_id=""
+                      checked
+                    />
+                    <span class="material-check__checkbox-container"
+                      ><i class="material-check__checkbox"></i
+                    ></span>
+                  </div>
+                </label>
+                <span class="material-list__text fg-1">
+                  <span
+                    class="material-list__text--primary material-list__text--complete"
+                    >Colegiatura Marzo 2026</span
+                  >
+                  <span class="material-list__text--secondary">
+                    <div
+                      class="badge badge-yellow badge badge-red material-chip--soft-yellow"
+                    >
+                      <span>Vence hoy</span>
+                    </div>
                   </span>
                 </span>
                 <span class="tuition__balance">
@@ -332,7 +397,7 @@
           </div>
         </div>
         <div class="col-lg-4 col-xxl-3">
-          <div id="" class="sticky" style="top: 14rem">
+          <div id="" class="sticky" style="top: 10rem">
             <div class="panel mb-3 scale-entrance">
               <div class="AGREEMENT">
                 <div class="panel__body">
