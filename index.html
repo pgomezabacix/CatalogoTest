@@ -400,6 +400,7 @@
             <div class="material-form__container mb-0">
               <select id="menu-mode" onchange="handleMenuMode(this.value)">
                 <option value="default">default</option>
+                <option value="blue">blue</option>
                 <option value="white">white</option>
               </select>
               <label for="menu-mode">Menu </label>
@@ -2555,6 +2556,9 @@
         menuClasses.forEach((c) => body.classList.remove(c));
         if (value === "white") {
           body.classList.add("menu--white");
+        }
+        if (value === "blue") {
+          body.classList.add("menu--blue");
         }
       }
 

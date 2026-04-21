@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backoffice</title>
+    <link href="favicon.ico" rel="shortcut icon" />
+    <!-- Bootstrap CSS
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+
+    <!-- Fontawesome 5 -->
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/testing.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Catalogo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="mattilda background--gray">
+    <div class="shadow-bar top-bar-wrapper">
+      <nav
+        class="navbar-header navbar navbar-expand navbar-light fixed-top navbar__main dashboard-padding"
+      >
+        <div class="action-item d-lg-none" id="hamburguer">
+          <i class="fas fa-bars action-item__icon"></i>
+        </div>
+
+        <div id="secondary-breadcrumbs">
+          <div class="action-item d-lg-none" data-toggle="dropdown">
+            <i class="fas fa-ellipsis-vertical action-item__icon"></i>
+          </div>
+          <div
+            class="dropdown-menu dropdown-menu--auto-width"
+            x-placement="bottom-start"
+          >
+            <a class="dropdown-item">Panel de control </a>
+
+            <a class="dropdown-item">Planes de estudios </a>
+
+            <a class="dropdown-item">Secundaria </a>
+
+            <a class="dropdown-item">Grupos </a>
+
+            <a class="dropdown-item active">Crear grupo</a>
+          </div>
+        </div>
+
+        <a class="navbar-brand">
+          <img
+            class="d-none d-lg-block img-filter"
+            src="/images/logo-mattilda.svg"
+            height="30"
+          />
+        </a>
+
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <ul class="navbar-nav" id="breadcrumb-nav">
+            <li
+              class="nav-item d-none d-lg-block text-truncate"
+              id="BREADCRUMBS"
+            >
+              <span class="breadcrumb">
+                <span class="breadcrumb-item active"> Colegios </span>
+              </span>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item material-form d-none d-md-block">
+              <form data-block_form_button="1">
+                <div
+                  class="material-form__group-wrapper material-form__group-wrapper-round w--18 mt-1"
+                >
+                  <div
+                    class="material-form--group material-form--group-round material-form--group-dark-mode-light"
+                  >
+                    <div class="material-form__action">
+                      <button class="btn material-form__action-btn">
+                        <i
+                          class="fa fa-magnifying-glass text-dark material-form__action-icon"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="material-form__container">
+                      <input
+                        type="text"
+                        class="material-form__input--sm material-form__input--left"
+                        placeholder="Buscar"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="material-form__action">
+                      <div
+                        class="btn material-form__action-btn hidden"
+                        id="search-clear"
+                      >
+                        <i
+                          class="fa fa-xmark text-dark material-form__action-icon"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </li>
+
+            <li class="nav-item dropdown w-min--4">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                MX
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu--condensed"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="fas fa-check text-blue dropdown-menu__icon"></i>
+                  México
+                </a>
+                <a class="dropdown-item">
+                  <i class="dropdown-menu__icon"></i>
+                  Colombia
+                </a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <i
+                  class="fas fa-circle-user avatar-icon fas fa-circle-user text-teal"
+                ></i
+                ><span class="nav-text text-truncate">Soporte Técnico</span>
+              </a>
+
+              <div
+                class="dropdown-menu dropdown-menu-right dropdown-menu--auto-width"
+                aria-labelledby="navbarDropdown"
+              >
+                <a class="dropdown-item">
+                  <i class="fas fa-headset dropdown-menu__icon"></i>
+                  Soporte técnico
+                </a>
+
+                <a class="dropdown-item"
+                  ><i class="fa fa-circle-info dropdown-menu__icon"></i>Soporte
+                  Técnico
+                </a>
+
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  id="dark-mode-switch"
+                  data-theme_value="0"
+                  ><i class="far dropdown-menu__icon fa-moon"></i>
+
+                  Ver en modo nocturno
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a class="dropdown-item"
+                  ><i class="fas fa-right-from-bracket dropdown-menu__icon"></i
+                  >Finalizar sesión
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="navbar-tabs dashboard-padding d-flex justify-content-between">
+        <ul class="nav nav--scrollable">
+          <li>
+            <a class="nav--tab active" href="#colegios" title="Colegios"
+              >Colegios</a
+            >
+          </li>
+          <li>
+            <a class="nav--tab" href="#usuarios" title="Usuarios">Usuarios</a>
+          </li>
+          <li>
+            <a class="nav--tab" href="#">Dashboard</a>
+          </li>
+          <li>
+            <a class="nav--tab" href="#">Calendario</a>
+          </li>
+        </ul>
+        <div class="text-right d-none">
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="surface-mode"
+                onchange="handleSurfaceMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="no-shadow">no shadow</option>
+                <option value="small-border">small border</option>
+                <option value="big-border">big border</option>
+                <option value="soft-shadow">soft shadow</option>
+              </select>
+              <label for="surface-mode">Surface </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="surface-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--12 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="background-mode"
+                onchange="handleBackgroundMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="gray">gray</option>
+                <option value="white">white</option>
+                <option value="soft-blue">soft blue</option>
+                <option value="blue-98">blue 98</option>
+                <option value="teal-98">teal 98</option>
+                <option value="teal-95">teal 95</option>
+                <option value="gradient-apple-white-blue">
+                  gradient apple white blue
+                </option>
+                <option value="gradient-teal-white-blue">
+                  gradient teal white blue
+                </option>
+                <option value="gradient-apple-blue">gradient apple blue</option>
+                <option value="gradient-teal-blue">gradient teal blue</option>
+              </select>
+              <label for="background-mode">Background </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="background-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select id="menu-mode" onchange="handleMenuMode(this.value)">
+                <option value="default">default</option>
+                <option value="blue">blue</option>
+                <option value="white">white</option>
+              </select>
+              <label for="menu-mode">Menu </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="menu-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <div class="material-form material-form--sm w--8 d-inline-block">
+            <div class="material-form__container mb-0">
+              <select
+                id="top -bar-mode"
+                onchange="handleTopBarMode(this.value)"
+              >
+                <option value="default">default</option>
+                <option value="border">border</option>
+              </select>
+              <label for="top-bar-mode">Top Bar </label>
+              <div class="material-form__icon-right">
+                <i class="fas fa-sort-down"></i>
+              </div>
+              <div
+                class="material-form__helper-text text-red"
+                id="top-bar-mode_error"
+              ></div>
+            </div>
+          </div>
+
+          <button
+            class="action-item d-inline-block"
+            id="copy-options"
+            data-toggle="tooltip"
+            title=""
+            data-original-title="Copiar"
+            data-placement="top"
+            onclick="copyOptions()"
+          >
+            <i class="far fa-copy text-dark action-item__icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="dashboard-padding dashboard-padding-top">
+      <div class="mt-4rem">
+        <main></main>
+      </div>
+    </section>
+
+    <!-- router js vanilla -->
+    <script src="./js/vendors/jquery/jquery.min.js"></script>
+    <script src="./routerMattilda/page.js"></script>
+    <script src="./routerMattilda/router.js"></script>
+    <script src="./routerMattilda/main.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/vendors/footable/footable.js"></script>
+
+    <script>
+      function makeFootable() {
+        $(".footable").footable();
+      }
+
+      function makeTooltips() {
+        $('[data-toggle="tooltip"]').tooltip();
+      }
+
+      document.addEventListener("change", function (e) {
+        const input = e.target;
+        if (input.type !== "checkbox") return;
+
+        const table = input.closest("table");
+        if (!table) return;
+
+        if (input.closest("thead")) {
+          table
+            .querySelectorAll('tbody input[type="checkbox"]')
+            .forEach((cb) => {
+              cb.checked = input.checked;
+            });
+        }
+
+        const anyChecked =
+          table.querySelectorAll('tbody input[type="checkbox"]:checked')
+            .length > 0;
+        const deleteBtn = document.getElementById("delete-school");
+        if (deleteBtn) deleteBtn.classList.toggle("disabled", !anyChecked);
+      });
+    </script>
+  </body>
+</html>

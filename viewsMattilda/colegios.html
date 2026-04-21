@@ -1,0 +1,424 @@
+<h1 class="mb-3 h3">Colegios</h1>
+<div class="panel mb-3">
+  <div class="panel__header action-bar">
+    <span class="panel__text">
+      <span class="panel__text--primary panel__text--complete"
+        >Mostrando 1-10 de 76 resultados</span
+      >
+    </span>
+    <div class="panel__header__actions action-bar__icons-section">
+      <button type="button" class="btn btn--light">
+        <i class="fas fa-plus"></i><span class="btn--icon-space">Añadir</span>
+      </button>
+      <div
+        class="action-item disabled"
+        id="delete-school"
+        data-toggle="tooltip"
+        data-placement="top"
+        trigger="hover"
+        title=""
+        data-original-title="Eliminar"
+      >
+        <i class="far fa-trash-can action-item__icon icon-color text-red"></i>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="panel__body">
+    <div class="table-responsive overflow__vertical border scrollbar--blue">
+      <table
+        class="table table-hover table--wide table-sm footable"
+        data-paging="true"
+        data-filtering="true"
+        data-paging-size="10"
+        data-paging-current="1"
+        data-paging-count-format="{CP} de {TP}"
+        data-sorting="true"
+        data-filter-delay="500"
+        data-filter-placeholder="Filtrar"
+        data-empty="No hay resultados"
+      >
+        <thead>
+          <tr>
+            <th data-sortable="false">
+              <label class="material-check">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </th>
+            <th>Nombre</th>
+            <th>Calle y número</th>
+            <th>Colonia</th>
+            <th>Municipio</th>
+            <th>Estado</th>
+            <th>Codigo postal</th>
+            <th data-type="date" data-format-string="DD/MM/YYYY">
+              Fecha de ingreso
+            </th>
+            <th data-type="number">Campus</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Norte">
+              <a href="#" class="font-weight-bold">Colegio Norte</a>
+            </td>
+            <td>Av. Principal 123</td>
+            <td>Colonia Centro</td>
+            <td>Municipio Centro</td>
+            <td>Estado de México</td>
+            <td>52000</td>
+            <td>21/12/2010</td>
+            <td>3</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Centro">
+              <a href="#" class="text-orange font-weight-bold"
+                >Colegio Centro</a
+              >
+            </td>
+            <td>Av. Principal 123</td>
+            <td>Colonia Centro</td>
+            <td>Municipio Centro</td>
+            <td>Estado de México</td>
+            <td>52000</td>
+            <td>21/12/2010</td>
+            <td>3</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Sur">
+              <a href="#" class="font-weight-bold">Colegio Sur</a>
+            </td>
+            <td>Av. Principal 123</td>
+            <td>Colonia Centro</td>
+            <td>Municipio Centro</td>
+            <td>Estado de México</td>
+            <td>52000</td>
+            <td>21/12/2010</td>
+            <td>0</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Prueba Campus">
+              <a href="#" class="font-weight-bold">Prueba Campus</a>
+            </td>
+            <td>Av. Principal 123</td>
+            <td>Colonia Pachuca</td>
+            <td>Municipio Pachuca</td>
+            <td>Estado de Hidalgo</td>
+            <td>42000</td>
+            <td>17/10/2015</td>
+            <td>4</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Prueba Campus">
+              <a href="#" class="font-weight-bold">Prueba Campus</a>
+            </td>
+            <td>Av. Principal 123</td>
+            <td>Colonia Centro</td>
+            <td>Municipio Centro</td>
+            <td>Estado de México</td>
+            <td>52000</td>
+            <td>21/12/2010</td>
+            <td>10</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Oriente">
+              <a href="#" class="font-weight-bold">Colegio Oriente</a>
+            </td>
+            <td>Calle Oriente 45</td>
+            <td>Colonia Oriente</td>
+            <td>Municipio Texcoco</td>
+            <td>Estado de México</td>
+            <td>56100</td>
+            <td>05/03/2012</td>
+            <td>2</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Poniente">
+              <a href="#" class="font-weight-bold">Colegio Poniente</a>
+            </td>
+            <td>Blvd. Poniente 78</td>
+            <td>Colonia Poniente</td>
+            <td>Municipio Toluca</td>
+            <td>Estado de México</td>
+            <td>50000</td>
+            <td>14/07/2013</td>
+            <td>5</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Instituto Reforma">
+              <a href="#" class="font-weight-bold">Instituto Reforma</a>
+            </td>
+            <td>Paseo Reforma 200</td>
+            <td>Colonia Juárez</td>
+            <td>Cuauhtémoc</td>
+            <td>Ciudad de México</td>
+            <td>06600</td>
+            <td>20/01/2009</td>
+            <td>7</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Lomas">
+              <a href="#" class="text-orange font-weight-bold">Colegio Lomas</a>
+            </td>
+            <td>Av. Lomas 310</td>
+            <td>Lomas de Chapultepec</td>
+            <td>Miguel Hidalgo</td>
+            <td>Ciudad de México</td>
+            <td>11000</td>
+            <td>08/09/2011</td>
+            <td>0</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Instituto Vallejo">
+              <a href="#" class="font-weight-bold">Instituto Vallejo</a>
+            </td>
+            <td>Calle Vallejo 55</td>
+            <td>Colonia Industrial</td>
+            <td>Gustavo A. Madero</td>
+            <td>Ciudad de México</td>
+            <td>07700</td>
+            <td>30/04/2016</td>
+            <td>3</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Pedregal">
+              <a href="#" class="font-weight-bold">Colegio Pedregal</a>
+            </td>
+            <td>Periférico Sur 1500</td>
+            <td>Pedregal de San Ángel</td>
+            <td>Álvaro Obregón</td>
+            <td>Ciudad de México</td>
+            <td>01900</td>
+            <td>12/02/2014</td>
+            <td>6</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Instituto Satélite">
+              <a href="#" class="font-weight-bold">Instituto Satélite</a>
+            </td>
+            <td>Circuito Médicos 90</td>
+            <td>Ciudad Satélite</td>
+            <td>Naucalpan</td>
+            <td>Estado de México</td>
+            <td>53100</td>
+            <td>22/06/2017</td>
+            <td>2</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="material-check mt-0">
+                <input type="checkbox" class="hidden" />
+                <span class="material-check__checkbox-container mx-auto"
+                  ><i
+                    class="material-check__checkbox material-check__checkbox--teal"
+                  ></i
+                ></span>
+              </label>
+            </td>
+            <td data-sort-value="Colegio Interlomas">
+              <a href="#" class="font-weight-bold">Colegio Interlomas</a>
+            </td>
+            <td>Av. Interlomas 400</td>
+            <td>Colonia Interlomas</td>
+            <td>Huixquilucan</td>
+            <td>Estado de México</td>
+            <td>52760</td>
+            <td>03/11/2018</td>
+            <td>4</td>
+            <td>
+              <button type="button" class="btn btn--gray-outline">
+                <span>Editar</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

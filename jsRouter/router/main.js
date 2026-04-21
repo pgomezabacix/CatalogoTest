@@ -33,6 +33,7 @@ const r = new Router(
         tree: new Layout(new Page('menu.html'), new Page('tree.html')),
         testing: new Layout(new Page('menu.html'), new Page('testing.html')),
         filters: new Layout(new Page('menu.html'), new Page('filters.html')),
+        colors: new Layout(new Page('menu.html'), new Page('colors.html')),
         '#default': new Page('menu.html'),
     },
     document.querySelector('main')
