@@ -19,6 +19,10 @@ body .action-item__icon--collapse:before {
     height: 2.5rem;
 }
 
+.btn--md{
+    height: 2rem;
+}
+
 .panel__header {
     min-height: 3.5rem;
 }
@@ -153,8 +157,24 @@ body .action-item__icon--collapse:before {
 
 
 /* Mattilda */
+.mattilda .navbar-header{
+    background-color: var(--color-teal);
+}
+
+.mattilda .breadcrumb-item.active {
+    color: var(--color-outline-variant);
+}
+
+.mattilda .navbar-nav .nav-link{
+    color: var(--color-on-inverse-surface)
+}
+
 .mattilda .navbar-brand img {
     height: 2rem;
+}
+
+.mattilda .nav--tab{
+    color: var(--color-on-surface-variant);
 }
 
 .mattilda .nav--tab.active {
