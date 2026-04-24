@@ -26,6 +26,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="mattilda background--gray">
     <div class="shadow-bar top-bar-wrapper">
       <nav
@@ -207,111 +208,18 @@
             <a class="nav--tab" href="#">Calendario</a>
           </li>
         </ul>
-        <div class="text-right d-none">
-          <div class="material-form material-form--sm w--8 d-inline-block">
-            <div class="material-form__container mb-0">
-              <select
-                id="surface-mode"
-                onchange="handleSurfaceMode(this.value)"
-              >
-                <option value="default">default</option>
-                <option value="no-shadow">no shadow</option>
-                <option value="small-border">small border</option>
-                <option value="big-border">big border</option>
-                <option value="soft-shadow">soft shadow</option>
-              </select>
-              <label for="surface-mode">Surface </label>
-              <div class="material-form__icon-right">
-                <i class="fas fa-sort-down"></i>
-              </div>
-              <div
-                class="material-form__helper-text text-red"
-                id="surface-mode_error"
-              ></div>
-            </div>
-          </div>
-
-          <div class="material-form material-form--sm w--12 d-inline-block">
-            <div class="material-form__container mb-0">
-              <select
-                id="background-mode"
-                onchange="handleBackgroundMode(this.value)"
-              >
-                <option value="default">default</option>
-                <option value="gray">gray</option>
-                <option value="white">white</option>
-                <option value="soft-blue">soft blue</option>
-                <option value="blue-98">blue 98</option>
-                <option value="teal-98">teal 98</option>
-                <option value="teal-95">teal 95</option>
-                <option value="gradient-apple-white-blue">
-                  gradient apple white blue
-                </option>
-                <option value="gradient-teal-white-blue">
-                  gradient teal white blue
-                </option>
-                <option value="gradient-apple-blue">gradient apple blue</option>
-                <option value="gradient-teal-blue">gradient teal blue</option>
-              </select>
-              <label for="background-mode">Background </label>
-              <div class="material-form__icon-right">
-                <i class="fas fa-sort-down"></i>
-              </div>
-              <div
-                class="material-form__helper-text text-red"
-                id="background-mode_error"
-              ></div>
-            </div>
-          </div>
-
-          <div class="material-form material-form--sm w--8 d-inline-block">
-            <div class="material-form__container mb-0">
-              <select id="menu-mode" onchange="handleMenuMode(this.value)">
-                <option value="default">default</option>
-                <option value="blue">blue</option>
-                <option value="white">white</option>
-              </select>
-              <label for="menu-mode">Menu </label>
-              <div class="material-form__icon-right">
-                <i class="fas fa-sort-down"></i>
-              </div>
-              <div
-                class="material-form__helper-text text-red"
-                id="menu-mode_error"
-              ></div>
-            </div>
-          </div>
-
-          <div class="material-form material-form--sm w--8 d-inline-block">
-            <div class="material-form__container mb-0">
-              <select
-                id="top -bar-mode"
-                onchange="handleTopBarMode(this.value)"
-              >
-                <option value="default">default</option>
-                <option value="border">border</option>
-              </select>
-              <label for="top-bar-mode">Top Bar </label>
-              <div class="material-form__icon-right">
-                <i class="fas fa-sort-down"></i>
-              </div>
-              <div
-                class="material-form__helper-text text-red"
-                id="top-bar-mode_error"
-              ></div>
-            </div>
-          </div>
-
+        <div class="text-right">
           <button
             class="action-item d-inline-block"
-            id="copy-options"
+            id="btn-factura"
             data-toggle="tooltip"
             title=""
-            data-original-title="Copiar"
+            data-original-title="Factura"
             data-placement="top"
-            onclick="copyOptions()"
+            data-toggle="modal"
+            data-target="#factura"
           >
-            <i class="far fa-copy text-dark action-item__icon"></i>
+            <i class="far fa-file-lines text-dark action-item__icon"></i>
           </button>
         </div>
       </div>
@@ -322,6 +230,230 @@
         <main></main>
       </div>
     </section>
+
+    <!-- Dialog  facturas-->
+    <div
+      class="modal fade"
+      id="factura"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="facturaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="facturaModalLabel">
+              Detalle de factura
+            </h5>
+            <div
+              class="action-item action-item--sm close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa fa-xmark action-item__icon"></i>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div
+              class="panel mb-grid-gutter scale-entrance mb-0 no-shadow border"
+            >
+              <div class="panel__header action-bar">
+                <span class="panel__text">
+                  <span class="panel__text--primary">Colegiatura mayo</span>
+                </span>
+              </div>
+
+              <div class="divider"></div>
+              <div class="panel__body">
+                <div
+                  class="alert alert--soft-green text-dark2 align-items-start"
+                >
+                  <i class="fas fa-check-circle alert__icon text-green"></i>
+                  <div>
+                    <div class="title--medium">Aprobada</div>
+                    <span class="body--medium"
+                      >La factura ha sido generada exitosamente</span
+                    >
+                  </div>
+                </div>
+                <div class="d-flex mb-3">
+                  <span class="mr-2 w-100">
+                    <button type="button" class="btn btn--gray-outline w-100">
+                      <i class="far fa-file-code"></i
+                      ><span class="btn--icon-space">Ver XML</span>
+                    </button> </span
+                  ><span class="ml-2 w-100">
+                    <button type="button" class="btn btn--gray-outline w-100">
+                      <i class="far fa-file-pdf"></i
+                      ><span class="btn--icon-space">Ver PDF</span>
+                    </button>
+                  </span>
+                </div>
+                <div class="d-flex mb-3">
+                  <span class="mr-2 w-100">
+                    <button type="button" class="btn btn--gray-outline w-100">
+                      <i class="fas fa-download"></i
+                      ><span class="btn--icon-space">Descargar factura</span>
+                    </button> </span
+                  ><span class="ml-2 w-100">
+                    <button type="button" class="btn btn--gray-outline w-100">
+                      <i class="far fa-paper-plane"></i
+                      ><span class="btn--icon-space">Reenviar factura</span>
+                    </button>
+                  </span>
+                </div>
+                <div class="title--medium">Datos de factura</div>
+                <div class="row mb-3">
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Monto pagado</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >$4,920.00</span
+                      >
+                    </span>
+                  </li>
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Forma de pago</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Tarjeta de crédito</span
+                      >
+                    </span>
+                  </li>
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Fecha de emisión</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >14 Abr 2026</span
+                      >
+                    </span>
+                  </li>
+                </div>
+
+                <div class="title--medium">Datos fiscales del receptor</div>
+                <div class="row mb-3">
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Razón social</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Sin información
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary">RFC</span>
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Sin información
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Uso de CFDI</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Sin información
+                      </span>
+                    </span>
+                  </li>
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Régimen fiscal</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Sin información
+                      </span>
+                    </span>
+                  </li>
+                </div>
+                <div class="title--medium">Tutor y estudiante</div>
+                <div class="row">
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Datos del tutor</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Carlos López</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >clopez@mail.com</span
+                      ></span
+                    >
+                  </li>
+
+                  <li
+                    class="material-list__item material-list__item--auto-height col-md-6"
+                  >
+                    <span class="material-list__text">
+                      <span class="material-list__text--secondary"
+                        >Datos del estudiante</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >Karla López</span
+                      >
+                      <span
+                        class="material-list__text--primary material-list__text--complete"
+                        >klopez@mail.com</span
+                      ></span
+                    >
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="modal-footer--right mb-3">
+              <button
+                type="button"
+                class="btn btn-text--dark"
+                data-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- router js vanilla -->
     <script src="./js/vendors/jquery/jquery.min.js"></script>
@@ -372,6 +504,32 @@
         const deleteBtn = document.getElementById("delete-school");
         if (deleteBtn) deleteBtn.classList.toggle("disabled", !anyChecked);
       });
+
+      document.addEventListener("click", function (e) {
+        const btn = e.target.closest("tbody .btn--gray-outline");
+        if (!btn) return;
+
+        const tds = Array.from(btn.closest("tr").querySelectorAll("td"));
+        // tds[0] = checkbox, tds[1..8] = datos, tds[9] = acciones
+        document.getElementById("cm-nombre").value =
+          tds[1].querySelector("a")?.textContent.trim() ?? "";
+        document.getElementById("cm-calle").value = tds[2].textContent.trim();
+        document.getElementById("cm-colonia").value = tds[3].textContent.trim();
+        document.getElementById("cm-municipio").value =
+          tds[4].textContent.trim();
+        document.getElementById("cm-estado").value = tds[5].textContent.trim();
+        document.getElementById("cm-cp").value = tds[6].textContent.trim();
+        document.getElementById("cm-fecha").value = tds[7].textContent.trim();
+        document.getElementById("cm-campus").value = tds[8].textContent.trim();
+
+        $("#colegioModal").modal("show");
+      });
+
+      document
+        .getElementById("btn-factura")
+        .addEventListener("click", function (e) {
+          $("#factura").modal("show");
+        });
     </script>
   </body>
 </html>

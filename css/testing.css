@@ -11,7 +11,7 @@ body .action-item__icon--collapse:before {
 }
 
 /* fonts to inter */
-.breadcrumb-item, .overline, .dropdown-item, .nav-drawer__text, .subtitle__1{
+.breadcrumb-item, .overline, .dropdown-item, .nav-drawer__text, .subtitle__1, .table thead th, {
     font-family: 'Inter', sans-serif;
 }
 
